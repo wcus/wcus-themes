@@ -161,4 +161,4 @@ function network_plugin_notifier() {
 	}
 }
 
-add_action( 'network_admin_notices', __NAMESPACE__ . '\network_plugin_notifier' );
+//add_action( 'network_admin_notices', __NAMESPACE__ . '\network_plugin_notifier' );
