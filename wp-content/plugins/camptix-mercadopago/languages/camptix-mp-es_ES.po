@@ -1,0 +1,133 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CampTix PagSeguro v1.5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-04-03 12:23-0300\n"
+"PO-Revision-Date: 2015-04-03 12:24-0300\n"
+"Last-Translator: Juanfra Aldasoro <juan@nicethemes.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ ctpagseguro
+#: camptix-mercadopago.php:91
+#, php-format
+msgid "CampTix MercadoPago Gateway depends on the last version of %s to work!"
+msgstr "Camptix MercadoPago depende de la última versión de %s para funcionar."
+
+# @ ctpagseguro
+#: camptix-mercadopago.php:110
+msgid "Settings"
+msgstr "Configuración"
+
+# @ ctpagseguro
+#: payment-mercadopago.php:50
+msgid ""
+"MercadoPago Gateway works by sending the user to MercadoPago.com to enter "
+"their payment information and complete the payment."
+msgstr ""
+"MercadpPago para Camptix funciona enviando el usuario a realizar el pago a "
+"MercadoPago.com"
+
+#: payment-mercadopago.php:64
+msgid "Client ID"
+msgstr "Client ID"
+
+#: payment-mercadopago.php:65
+msgid "Client Secret"
+msgstr "Client Secret"
+
+#: payment-mercadopago.php:66
+msgid "Sandbox Mode"
+msgstr "Modo Sandbox"
+
+#: payment-mercadopago.php:67
+msgid "MercadoPago sandbox can be used to test payments."
+msgstr "El modo sandbox puede ser utilizado para realizar pruebas."
+
+#: payment-mercadopago.php:107
+msgid "Argentine peso"
+msgstr "Peso argentino"
+
+#: payment-mercadopago.php:108
+msgid "Brazilian real"
+msgstr "Real brasilero"
+
+#: payment-mercadopago.php:109
+msgid "Colombian peso"
+msgstr "Peso colombiano"
+
+#: payment-mercadopago.php:110
+msgid "Mexican peso"
+msgstr "Peso mexicano"
+
+#: payment-mercadopago.php:111
+msgid "Venezuelan bolívar"
+msgstr "Bolívar venezolano"
+
+#: payment-mercadopago.php:127
+msgid "Getting MercadoPago client credentials..."
+msgstr "Obteniendo las credenciales del cliente en MercadoPago..."
+
+#: payment-mercadopago.php:152
+msgid "Received valid response from MercadoPago"
+msgstr "Se recibió una respuesta válida de MercadoPago"
+
+#: payment-mercadopago.php:156
+#, fuzzy
+msgid "Received invalid response from MercadoPago."
+msgstr "Se recibió una respuesta válida de MercadoPago"
+
+#: payment-mercadopago.php:174
+msgid "Payment arguments for order"
+msgstr "Argumentos de pago para la orden"
+
+# @ ctpagseguro
+#: payment-mercadopago.php:177
+msgid "Event"
+msgstr "Evento"
+
+#: payment-mercadopago.php:270
+msgid "Payment link generated with success from MercadoPago"
+msgstr "Enlace de pago generado satisfactoriamente desde MercadoPago"
+
+#: payment-mercadopago.php:280
+#, fuzzy
+msgid "Payment link response with error from MercadoPago"
+msgstr "Se recibió una respuesta válida de MercadoPago"
+
+# @ ctpagseguro
+#: payment-mercadopago.php:325
+msgid "The selected currency is not supported by this payment method."
+msgstr "La moneda seleccionada no es soportada por este método de pago."
+
+#: payment-mercadopago.php:455
+msgid "Checking IPN request..."
+msgstr "Chequeando respuesta desde MercadoPago..."
+
+#: payment-mercadopago.php:478
+msgid "IPN Response"
+msgstr "Notificación de pago Instantánea"
+
+#: payment-mercadopago.php:485
+msgid "Received valid IPN response from MercadoPago"
+msgstr "Se recibió una respuesta válida desde MercadoPago"
+
+#: payment-mercadopago.php:490
+msgid "Received invalid IPN response from MercadoPago."
+msgstr "Se recibió una respuesta errónea desde MercadoPago"
+
+#~ msgid "Debug Log"
+#~ msgstr "Registrar en log"
+
+#~ msgid "Log MercadoPago events, such as API requests."
+#~ msgstr "Registrar eventos de MercadoPago, como llamados a la API."
