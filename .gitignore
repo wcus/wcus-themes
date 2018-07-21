@@ -98,3 +98,6 @@ wp-content/mysql.sql
 *.asf
 *.wmv
 *.avi
+
+# additional configs
+config.codekit3

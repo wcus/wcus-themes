@@ -1,0 +1,54 @@
+/*--------------------------------------------------------------
+## Z-indexing
+--------------------------------------------------------------*/
+// WCUS Nashville Badge
+#media_image-5 {
+	z-index: 2;
+}
+
+// CTA button
+#custom_html-4 {
+	z-index: 3;
+}
+
+/*--------------------------------------------------------------
+## Header Widget Styles
+--------------------------------------------------------------*/
+#header-widgets {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Header Widget Area 1
+--------------------------------------------------------------*/
+#media_image-5 img {
+	box-shadow: 0 20px 18px 0 rgba(0,0,0,0.50);
+}
+
+// CTA Button
+#custom_html-4 {
+	margin-top: -80px;
+}
+
+// Callout text
+#text-10 {
+	@include font-size(1.125);
+	line-height: 1.5;
+	max-width: 540px;
+	margin: -10px auto 0;
+	background: $color__berry;
+	color: $color__white;
+	padding: 70px 20px 50px;
+}
+
+/*--------------------------------------------------------------
+## Header Widget Area 5 - Swoop Image
+--------------------------------------------------------------*/
+#header-widget-5 .widget:last-child {
+	margin-bottom: 0;
+}
+
+#header-widget-5 .widget img {
+	display: block;
+	margin-bottom: -1px;
+}

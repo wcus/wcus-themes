@@ -1,0 +1,12 @@
+.wcus-button {
+	@include font-size(0.875);
+	font-family: 'Nunito', -apple-system, BlinkMacSystemFont, segoe ui, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	background: #C8EBEB;
+	box-shadow: 0 2px 11px 0 rgba(0,0,0,0.50);
+	border-radius: 100px;
+	color: $color__azure;
+	padding: 10px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
