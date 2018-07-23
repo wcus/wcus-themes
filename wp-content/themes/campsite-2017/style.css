@@ -374,6 +374,9 @@ table {
   padding: 10px 20px;
   text-decoration: none;
   text-transform: uppercase; }
+  .wcus-button:hover, .wcus-button:focus {
+    color: #10193F;
+    background: #ffffff; }
 
 .wcus-social-button {
   background-image: url("https://2018.wcus.test/wp-content/uploads/sites/2/2018/07/social-icons.png");
@@ -500,6 +503,8 @@ a {
   padding: 0 30px; }
   .main-navigation #primary-menu li:hover, .main-navigation #primary-menu li.focus {
     background: #ffffff; }
+    .main-navigation #primary-menu li:hover > a, .main-navigation #primary-menu li.focus > a {
+      color: #00627E; }
   .main-navigation #primary-menu li a {
     color: #111111; }
     .main-navigation #primary-menu li a:hover, .main-navigation #primary-menu li a.focus {

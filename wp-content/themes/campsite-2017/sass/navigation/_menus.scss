@@ -11,6 +11,10 @@
 		li {
 			&:hover, &.focus {
 				background: $color__white;
+
+				> a {
+					color: $color__azure;
+				}
 			}
 
 			a {
