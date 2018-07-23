@@ -10,3 +10,26 @@
 	text-decoration: none;
 	text-transform: uppercase;
 }
+
+.wcus-social-button {
+	background-image: url('https://2018.wcus.test/wp-content/uploads/sites/2/2018/07/social-icons.png');
+	background-size: auto 54px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	margin: 0 7px;
+	width: 56px;
+	height: 54px;
+	text-indent: -999em;
+
+	&:focus, &:hover {
+		opacity: 0.75;
+	}
+}
+
+.wcus-social-button--twitter {
+	background-position: -70px 0;
+}
+
+.wcus-social-button--instagram {
+	background-position: -140px 0;
+}
