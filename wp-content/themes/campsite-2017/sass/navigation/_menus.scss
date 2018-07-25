@@ -2,6 +2,7 @@
 	#primary-menu {
 		@include clearfix;
 		@include font-size(1.25);
+		max-width: 1120px;
 		font-family: $font__main;
 		font-weight: 700;
 		background: $color__robin_blue;
@@ -44,7 +45,7 @@
 					&:after {
 						transition: transform 0.25s ease-in;
 						content: '';
-						background-image: url('https://2018.wcus.wpengine.com/wp-content/uploads/sites/2/2018/07/dropdown-arrow.png');
+						background-image: url('/wp-content/uploads/sites/2/2018/07/dropdown-arrow.png');
 						background-size: 100%;
 						background-position: 0 0px;
 						background-repeat: no-repeat;
