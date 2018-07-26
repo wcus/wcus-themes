@@ -92,7 +92,6 @@ jQuery(document).ready(function ($) {
         phone = phone.replace(/[^0-9]/g,'');
 
         if(!($.isNumeric(phone))){
-        	console.log('test');
             $('.message').text('Please Enter Only Numbers');
             $('.message').css('color','red');
             $('.mobile').val('');
@@ -102,7 +101,6 @@ jQuery(document).ready(function ($) {
         }else
         if (phone.length < 10 )
         {
-        	console.log('test');
             //alert('Phone number must be 10 digits.');
             $('.message').text('Please Enter correct Mobile Number Or Number with STD Code');
             $('.message').css('color','red');
@@ -114,14 +112,7 @@ jQuery(document).ready(function ($) {
 		return false;
 
         } 
-     
+     	return true;
 		// Bailout.
-		if (camptix_inr_vars.gateway_id !== $('select[name="tix_payment_method"]', $form).val()) {
-			return true;
-		}
-
-		e.preventDefault();
-
-		return false;
 	});
 });
