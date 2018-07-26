@@ -1,0 +1,74 @@
+/*--------------------------------------------------------------
+## Content Widget Styles
+--------------------------------------------------------------*/
+#content-widget-1 {
+	max-width: 1120px;
+	margin: 0 auto;
+
+	.textwidget {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-between;
+
+		a {
+			&:hover, &:focus {
+				+ figcaption {
+					background: $color__robin_blue;
+					color: $color__navy;
+
+					&:before {
+						left: 0;
+					}
+
+					&:after {
+						left: 100%;
+					}
+				}
+			}
+		}
+
+		figure {
+			width: 23% !important;
+			position: relative;
+		}
+
+		figcaption {
+			@include font-size(1.375);
+			transition: color 0.25s ease-in;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: $color__jam;
+			z-index: 2;
+			width: 100%;
+			margin: 0;
+			padding: 10px;
+			color: $color__white;
+			text-transform: uppercase;
+			overflow: hidden;
+
+			&:before {
+				transition: all 0.25s ease-in-out;
+				content: '';
+				width: 100%;
+				height: 4px;
+				background: $color__navy;
+				position: absolute;
+				bottom: 4px;
+				left: -100%;
+			}
+
+			&:after {
+				transition: all 0.25s ease-in-out;
+				content: '';
+				width: 100%;
+				height: 4px;
+				background: $color__squash;
+				position: absolute;
+				bottom: 4px;
+				left: 0;
+			}
+		}
+	}
+}

@@ -1,1 +1,1 @@
-<?php echo 'silence in the library'; ?>
+<?php //echo 'silence in the library'; ?>
