@@ -231,7 +231,25 @@ textarea {
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: "BioRhyme", Georgia, "Times New Roman", Times, serif;
   clear: both; }
+
+h1 {
+  font-size: 46px;
+  font-size: 2.875rem; }
+
+h2 {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.2; }
+
+h3 {
+  font-size: 24px;
+  font-size: 1.5rem; }
+
+h4 {
+  font-size: 20px;
+  font-size: 1.25rem; }
 
 p {
   margin-bottom: 1.5em; }
@@ -759,57 +777,132 @@ a {
 /*--------------------------------------------------------------
 ## Content Widget Styles
 --------------------------------------------------------------*/
-#content-widget-1 {
-  max-width: 1120px;
-  margin: 0 auto; }
-  #content-widget-1 .textwidget {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between; }
-    #content-widget-1 .textwidget a:hover + figcaption, #content-widget-1 .textwidget a:focus + figcaption {
-      background: #C8EBEB;
-      color: #10193F; }
-      #content-widget-1 .textwidget a:hover + figcaption:before, #content-widget-1 .textwidget a:focus + figcaption:before {
-        left: 0; }
-      #content-widget-1 .textwidget a:hover + figcaption:after, #content-widget-1 .textwidget a:focus + figcaption:after {
-        left: 100%; }
-    #content-widget-1 .textwidget figure {
-      width: 23% !important;
-      position: relative; }
-    #content-widget-1 .textwidget figcaption {
-      font-size: 22px;
-      font-size: 1.375rem;
-      transition: color 0.25s ease-in;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background: #722247;
-      z-index: 2;
+.content-widgets-block {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px; }
+
+.wcus-practical-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between; }
+  .wcus-practical-info a:hover + figcaption, .wcus-practical-info a:focus + figcaption {
+    background: #C8EBEB;
+    color: #10193F; }
+    .wcus-practical-info a:hover + figcaption:before, .wcus-practical-info a:focus + figcaption:before {
+      left: 0; }
+    .wcus-practical-info a:hover + figcaption:after, .wcus-practical-info a:focus + figcaption:after {
+      left: 100%; }
+  .wcus-practical-info figure {
+    width: 23% !important;
+    position: relative; }
+  .wcus-practical-info figcaption {
+    font-size: 22px;
+    font-size: 1.375rem;
+    transition: background 0.25s ease-in;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #722247;
+    z-index: 2;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    overflow: hidden; }
+    .wcus-practical-info figcaption:before {
+      transition: all 0.25s ease-in-out;
+      content: '';
       width: 100%;
-      margin: 0;
-      padding: 10px;
+      height: 4px;
+      background: #10193F;
+      position: absolute;
+      bottom: 4px;
+      left: -100%; }
+    .wcus-practical-info figcaption:after {
+      transition: all 0.25s ease-in-out;
+      content: '';
+      width: 100%;
+      height: 4px;
+      background: #F68C36;
+      position: absolute;
+      bottom: 4px;
+      left: 0; }
+
+.wcus-calls {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 60px; }
+  .wcus-calls .wcus-callout {
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+    background: #10193F; }
+    @media only screen and (min-width: 768px) {
+      .wcus-calls .wcus-callout {
+        width: calc(50% - 5px); }
+        .wcus-calls .wcus-callout:nth-child(odd) {
+          margin-right: 5px; }
+        .wcus-calls .wcus-callout:nth-child(even) {
+          margin-left: 5px; } }
+    .wcus-calls .wcus-callout a {
+      text-decoration: none;
+      display: block;
+      overflow: hidden;
+      text-align: center; }
+      .wcus-calls .wcus-callout a:hover img, .wcus-calls .wcus-callout a:focus img {
+        transform: scale(1.25) rotate(2deg); }
+      .wcus-calls .wcus-callout a:hover h3:after, .wcus-calls .wcus-callout a:focus h3:after {
+        width: 100%; }
+    .wcus-calls .wcus-callout img {
+      transition: transform 0.25s ease-in-out;
+      z-index: 1;
+      display: block; }
+    .wcus-calls .wcus-callout .wcus-callout-title {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding: 10px; }
+    .wcus-calls .wcus-callout h3 {
+      font-size: 3.5vw;
+      display: inline-block;
+      text-align: center;
+      z-index: 2;
       color: #ffffff;
+      margin: 0;
       text-transform: uppercase;
-      overflow: hidden; }
-      #content-widget-1 .textwidget figcaption:before {
-        transition: all 0.25s ease-in-out;
+      position: relative; }
+      .wcus-calls .wcus-callout h3:after {
         content: '';
-        width: 100%;
-        height: 4px;
-        background: #10193F;
+        transition: width 0.25s ease-in;
+        height: 10px;
+        width: 0px;
+        background-color: #F68C36;
+        display: block;
         position: absolute;
-        bottom: 4px;
-        left: -100%; }
-      #content-widget-1 .textwidget figcaption:after {
-        transition: all 0.25s ease-in-out;
-        content: '';
-        width: 100%;
-        height: 4px;
-        background: #F68C36;
-        position: absolute;
-        bottom: 4px;
-        left: 0; }
+        left: 0;
+        bottom: 12px;
+        z-index: -1; }
+
+.wcus-textwidget-narrow {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 130px 0 20px;
+  position: relative; }
+  .wcus-textwidget-narrow h2 {
+    color: #00627E;
+    margin-bottom: 0; }
+    .wcus-textwidget-narrow h2 + p {
+      margin-top: 0; }
+  .wcus-textwidget-narrow .alignright {
+    position: absolute;
+    top: 10px;
+    right: 0; }
 
 /*--------------------------------------------------------------
 # Content
