@@ -248,22 +248,28 @@ class CampTix_Payment_Method_Instamojo extends CampTix_Payment_Method {
 		//It will execute when number is complete incomplete for validating instamojo number process.
         
 		$phone = ltrim( $extra_info['phone'], '0' );
+		$phone = ltrim( $phone, '+91' ); // Remove '+91' CountyCode of India : Not supported by Instamojo. issue #43, #46
+		$phone = ltrim( $phone, '+' ); // Remove '+' for international attendee : Not supported by Instamojo. issue #43, #46
+		$phone = str_replace( array( ' ', '-', '.' ), '', $phone ); // Remove special characters : Not supported by Instamojo. issue #43, #46
+		if ( strlen($phone) > 10 ) {
+		    $attendee_phone = substr( $phone, -10 );
+		    $attendee_phone = ltrim( $attendee_phone, '0' );
+		    if ( strlen($attendee_phone) <= 9 ) {
+			$attendee_phone = str_pad( $attendee_phone, 10, '9', STR_PAD_LEFT);
+			}
+		} elseif ( strlen($phone) <= 9 ) {
+		     $attendee_phone = str_pad( $phone, 10, '9', STR_PAD_LEFT);
+		} else {
+			$attendee_phone = $phone; // Instamojo is expecting a 10 digit value.
+		}
 
-        if ( strlen($phone) > 10 ) {
-            $attendee_phone = substr( $phone, -10 );
-            $attendee_phone = ltrim( $attendee_phone, '0' );
-            if ( strlen($attendee_phone) <= 9 ) {
-                $attendee_phone = str_pad( $attendee_phone, 10, '9', STR_PAD_LEFT);
-             
-        }
-        } elseif ( strlen($phone) <= 9 ) {
-             $attendee_phone = str_pad( $phone, 10, '9', STR_PAD_LEFT);
-        }else{
-            $attendee_phone = '9999999999';
-        }
-
+		// Indian mobile numbers start with 9,8,7, or 6. issue #43, #46
+		if ( ! preg_match( "/^[6-9][0-9]{9}$/", $attendee_phone ) ) {
+			$attendee_phone = '9999999999'; // No clearity about international number via API; thus using the example.
+		}
+		
 		$payload = Array(
-			'purpose'                 => $productinfo,
+			'purpose'                 => substr( $productinfo, 0, 30 ), // https://github.com/wpindiaorg/camptix-indian-payments/issues/45#issuecomment-392804508
 			'amount'                  => $order_amount,
 			'phone'                   => $attendee_phone,
 			'buyer_name'              => $name,
