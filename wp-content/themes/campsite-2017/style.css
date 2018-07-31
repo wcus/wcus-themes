@@ -795,11 +795,14 @@ a {
     .wcus-practical-info a:hover + figcaption:after, .wcus-practical-info a:focus + figcaption:after {
       left: 100%; }
   .wcus-practical-info figure {
-    width: 23% !important;
+    width: 48% !important;
     position: relative; }
+    @media only screen and (min-width: 768px) {
+      .wcus-practical-info figure {
+        width: 23% !important; } }
   .wcus-practical-info figcaption {
-    font-size: 22px;
-    font-size: 1.375rem;
+    font-size: 18px;
+    font-size: 3.75vw;
     transition: background 0.25s ease-in;
     position: absolute;
     bottom: 0;
@@ -812,6 +815,10 @@ a {
     color: #ffffff;
     text-transform: uppercase;
     overflow: hidden; }
+    @media only screen and (min-width: 768px) {
+      .wcus-practical-info figcaption {
+        font-size: 22px;
+        font-size: 1.75vw; } }
     .wcus-practical-info figcaption:before {
       transition: all 0.25s ease-in-out;
       content: '';
@@ -869,6 +876,7 @@ a {
       width: 100%;
       padding: 10px; }
     .wcus-calls .wcus-callout h3 {
+      font-size: 44px;
       font-size: 3.5vw;
       display: inline-block;
       text-align: center;
@@ -940,7 +948,7 @@ a {
 .blog .site-main {
   background-color: #EAE4E3;
   max-width: 1120px;
-  margin: 0 auto;
+  margin: 30px auto 50px;
   padding: 35px 35px 20px; }
   .blog .site-main:before {
     content: 'Latest News';
@@ -954,13 +962,14 @@ a {
   .blog .site-main article {
     position: relative;
     min-height: 327px; }
-    .blog .site-main article > * {
-      padding-left: 50%; }
-      .blog .site-main article > * img:first-child {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: calc(50% - 25px); }
+    @media only screen and (min-width: 768px) {
+      .blog .site-main article > * {
+        padding-left: 50%; }
+        .blog .site-main article > * img:first-child {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: calc(50% - 25px); } }
   .blog .site-main .entry-title {
     font-size: 24px;
     font-size: 1.5rem;

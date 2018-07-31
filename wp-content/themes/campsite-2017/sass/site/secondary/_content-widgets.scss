@@ -31,12 +31,17 @@
 	}
 
 	figure {
-		width: 23% !important;
+		width: 48% !important;
 		position: relative;
+
+		@media #{$break-medium} {
+			width: 23% !important;
+		}
 	}
 
 	figcaption {
-		@include font-size(1.375);
+		font-size: 18px;
+		font-size: 3.75vw;
 		transition: background 0.25s ease-in;
 		position: absolute;
 		bottom: 0;
@@ -49,6 +54,11 @@
 		color: $color__white;
 		text-transform: uppercase;
 		overflow: hidden;
+
+		@media #{$break-medium} {
+			font-size: 22px;
+			font-size: 1.75vw;
+		}
 
 		&:before {
 			transition: all 0.25s ease-in-out;
@@ -133,6 +143,7 @@
 		}
 
 		h3 {
+			font-size: 44px;
 			font-size: 3.5vw;
 			display: inline-block;
 			text-align: center;

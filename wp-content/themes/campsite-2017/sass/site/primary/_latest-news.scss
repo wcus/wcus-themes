@@ -2,7 +2,7 @@
 	.site-main {
 		background-color: $color__taupe;
 		max-width: 1120px;
-		margin: 0 auto;
+		margin: 30px auto 50px;
 		padding: 35px 35px 20px;
 
 		&:before {
@@ -19,18 +19,21 @@
 			position: relative;
 			min-height: 327px;
 
-			> * {
-				padding-left: 50%;
+			@media #{$break-medium} {
+				> * {
+					padding-left: 50%;
 
-				img {
-					&:first-child {
-						position: absolute;
-						left: 0;
-						top: 0;
-						width: calc(50% - 25px);
+					img {
+						&:first-child {
+							position: absolute;
+							left: 0;
+							top: 0;
+							width: calc(50% - 25px);
+						}
 					}
 				}
 			}
+			
 		}
 
 		.entry-title {
