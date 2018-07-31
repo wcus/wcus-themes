@@ -3,7 +3,7 @@
 		background-color: $color__taupe;
 		max-width: 1120px;
 		margin: 0 auto;
-		padding: 35px;
+		padding: 35px 35px 20px;
 
 		&:before {
 			content: 'Latest News';
@@ -35,8 +35,12 @@
 
 		.entry-title {
 			@include font-size(1.5);
-			padding-top: 35px;
+			font-family: $font__main;
+			font-weight: 400;
+			text-transform: uppercase;
+			padding-top: 10px;
 			margin-top: 0;
+			margin-bottom: 0;
 			
 			a {
 				color: $color__navy;
@@ -48,21 +52,20 @@
 				}
 
 				&:visited {
-
+					color: $color__azure;
 				}
 			}
 		}
 
 		.entry-meta {
 			@include font-size(0.875);
-			position: absolute;
-			top: 10px;
-			color: $color__azure;
+			//position: absolute;
+			//top: 10px;
+			margin-bottom: 20px;
 
 			a {
 				color: $color__azure;
 				text-decoration: none;
-				text-transform: uppercase;
 
 				&:hover, &:focus {
 					text-decoration: underline;
@@ -70,8 +73,12 @@
 				}
 			}
 
+			time {
+				text-transform: uppercase;
+			}
+
 			.byline {
-				display: none;
+				//display: none;
 			}
 		}
 
@@ -85,6 +92,12 @@
 
 		.entry-footer {
 			display: none;
+		}
+
+		.posts-navigation {
+			@include font-size(0.875);
+			margin: 15px 0 0 0;
+			text-transform: uppercase;
 		}
 	}
 }
