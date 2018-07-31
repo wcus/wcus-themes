@@ -224,7 +224,7 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #111111;
   font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -495,11 +495,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: #722247; }
   a:visited {
-    color: purple; }
+    color: #10193F; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #00627E; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -936,6 +936,63 @@ a {
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
+
+.blog .site-main {
+  background-color: #EAE4E3;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 35px; }
+  .blog .site-main:before {
+    content: 'Latest News';
+    font-size: 30px;
+    font-size: 1.875rem;
+    font-family: "BioRhyme", Georgia, "Times New Roman", Times, serif;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 auto 25px; }
+  .blog .site-main article {
+    position: relative;
+    min-height: 327px; }
+    .blog .site-main article > * {
+      padding-left: 50%; }
+      .blog .site-main article > * img:first-child {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: calc(50% - 25px); }
+  .blog .site-main .entry-title {
+    font-size: 24px;
+    font-size: 1.5rem;
+    padding-top: 35px;
+    margin-top: 0; }
+    .blog .site-main .entry-title a {
+      color: #10193F;
+      text-decoration: none; }
+      .blog .site-main .entry-title a:hover, .blog .site-main .entry-title a:focus {
+        color: #722247;
+        text-decoration: underline; }
+  .blog .site-main .entry-meta {
+    font-size: 14px;
+    font-size: 0.875rem;
+    position: absolute;
+    top: 10px;
+    color: #00627E; }
+    .blog .site-main .entry-meta a {
+      color: #00627E;
+      text-decoration: none;
+      text-transform: uppercase; }
+      .blog .site-main .entry-meta a:hover, .blog .site-main .entry-meta a:focus {
+        text-decoration: underline;
+        color: #722247; }
+    .blog .site-main .entry-meta .byline {
+      display: none; }
+  .blog .site-main .entry-content {
+    margin-top: 0; }
+    .blog .site-main .entry-content > *:first-child {
+      margin-top: 0; }
+  .blog .site-main .entry-footer {
+    display: none; }
 
 /*--------------------------------------------------------------
 ## Comments
