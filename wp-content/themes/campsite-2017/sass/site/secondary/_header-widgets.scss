@@ -67,3 +67,65 @@
 	display: block;
 	margin-bottom: -1px;
 }
+
+/*--------------------------------------------------------------
+## Jetpack Subscription Widget
+--------------------------------------------------------------*/
+.jetpack_subscription_widget,
+#custom_html-8 {
+	flex-direction: row;
+	flex-wrap: wrap;
+	color: $color__white;
+	text-align: center;
+	padding: 0 30px;
+
+	.widget-title {
+		margin: 10px 0 0;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+
+	#subscribe-text {
+		p {
+			margin: 0 0 3px;
+		}
+	}
+
+	form {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		#subscribe-email {
+			flex: 1 0 auto;
+
+			input {
+				width: 100%;
+				border-radius: 100px;
+				padding: 3px 10px;
+			}
+		}
+
+		#subscribe-submit {
+			flex: 0 1 auto;
+
+			input[type="submit"] {
+				font-family: $font__main;
+				font-weight: 700;
+				width: 100%;
+				background-color: $color__robin_blue;
+				color: $color__azure;
+				height: 100%;
+				border-radius: 100px;
+				border: 0px;
+				margin-left: 8px;
+				text-transform: uppercase;
+
+				&:hover, &:focus {
+					background-color: $color__white;
+					color: $color__navy;
+				}
+			}
+		}
+	}
+}

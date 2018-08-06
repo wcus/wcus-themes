@@ -775,6 +775,58 @@ a {
   margin-bottom: -1px; }
 
 /*--------------------------------------------------------------
+## Jetpack Subscription Widget
+--------------------------------------------------------------*/
+.jetpack_subscription_widget,
+#custom_html-8 {
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #ffffff;
+  text-align: center;
+  padding: 0 30px; }
+  .jetpack_subscription_widget .widget-title,
+  #custom_html-8 .widget-title {
+    margin: 10px 0 0;
+    font-weight: 400;
+    text-transform: uppercase; }
+  .jetpack_subscription_widget #subscribe-text p,
+  #custom_html-8 #subscribe-text p {
+    margin: 0 0 3px; }
+  .jetpack_subscription_widget form,
+  #custom_html-8 form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .jetpack_subscription_widget form #subscribe-email,
+    #custom_html-8 form #subscribe-email {
+      flex: 1 0 auto; }
+      .jetpack_subscription_widget form #subscribe-email input,
+      #custom_html-8 form #subscribe-email input {
+        width: 100%;
+        border-radius: 100px;
+        padding: 3px 10px; }
+    .jetpack_subscription_widget form #subscribe-submit,
+    #custom_html-8 form #subscribe-submit {
+      flex: 0 1 auto; }
+      .jetpack_subscription_widget form #subscribe-submit input[type="submit"],
+      #custom_html-8 form #subscribe-submit input[type="submit"] {
+        font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 700;
+        width: 100%;
+        background-color: #C8EBEB;
+        color: #00627E;
+        height: 100%;
+        border-radius: 100px;
+        border: 0px;
+        margin-left: 8px;
+        text-transform: uppercase; }
+        .jetpack_subscription_widget form #subscribe-submit input[type="submit"]:hover, .jetpack_subscription_widget form #subscribe-submit input[type="submit"]:focus,
+        #custom_html-8 form #subscribe-submit input[type="submit"]:hover,
+        #custom_html-8 form #subscribe-submit input[type="submit"]:focus {
+          background-color: #ffffff;
+          color: #10193F; }
+
+/*--------------------------------------------------------------
 ## Content Widget Styles
 --------------------------------------------------------------*/
 .content-widgets-block {
@@ -936,13 +988,16 @@ a {
   .site-footer > div {
     position: relative;
     z-index: 2; }
+  .site-footer .jetpack_subscription_widget,
+  .site-footer #custom_html-8 {
+    background: #00627E; }
 
 #footer-widgets {
   max-width: 1120px;
   margin: 0 auto; }
 
 #footer-widget-2 {
-  padding: 40px 0;
+  padding: 30px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
