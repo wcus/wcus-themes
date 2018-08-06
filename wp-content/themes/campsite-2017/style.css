@@ -783,15 +783,20 @@ a {
   flex-wrap: wrap;
   color: #ffffff;
   text-align: center;
-  padding: 0 30px; }
+  padding: 0 30px;
+  max-width: 800px;
+  margin: 0 auto; }
   .jetpack_subscription_widget .widget-title,
   #custom_html-8 .widget-title {
     margin: 10px 0 0;
     font-weight: 400;
     text-transform: uppercase; }
-  .jetpack_subscription_widget #subscribe-text p,
-  #custom_html-8 #subscribe-text p {
-    margin: 0 0 3px; }
+  .jetpack_subscription_widget #subscribe-text,
+  #custom_html-8 #subscribe-text {
+    width: 100%; }
+    .jetpack_subscription_widget #subscribe-text p,
+    #custom_html-8 #subscribe-text p {
+      margin: 0 0 3px; }
   .jetpack_subscription_widget form,
   #custom_html-8 form {
     display: flex;
@@ -819,7 +824,8 @@ a {
         border-radius: 100px;
         border: 0px;
         margin-left: 8px;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        padding: .6em 40px .4em; }
         .jetpack_subscription_widget form #subscribe-submit input[type="submit"]:hover, .jetpack_subscription_widget form #subscribe-submit input[type="submit"]:focus,
         #custom_html-8 form #subscribe-submit input[type="submit"]:hover,
         #custom_html-8 form #subscribe-submit input[type="submit"]:focus {
