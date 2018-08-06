@@ -1,6 +1,6 @@
 ## Footer Widget Social Markup
 
-<div class="wcus-footer-social">
+```<div class="wcus-footer-social">
 	<div class="wcus-footer-logo">
 		<a href="/">
             <!-- SVG code of logo -->
@@ -16,4 +16,4 @@
             </div>
         </div>
     </div>
-</div>
+</div>```
