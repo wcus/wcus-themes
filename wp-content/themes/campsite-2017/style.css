@@ -788,7 +788,7 @@ a {
   margin: 0 auto; }
   .jetpack_subscription_widget .widget-title,
   #custom_html-8 .widget-title {
-    margin: 10px 0 0;
+    margin: 40px 0 0;
     font-weight: 400;
     text-transform: uppercase; }
   .jetpack_subscription_widget #subscribe-text,
@@ -997,6 +997,11 @@ a {
   .site-footer .jetpack_subscription_widget,
   .site-footer #custom_html-8 {
     background: #00627E; }
+    .site-footer .jetpack_subscription_widget .widget-title,
+    .site-footer #custom_html-8 .widget-title {
+      margin: 10px 0 0;
+      font-weight: 400;
+      text-transform: uppercase; }
 
 #footer-widgets {
   max-width: 1120px;

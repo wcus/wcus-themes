@@ -30,6 +30,12 @@
 	.jetpack_subscription_widget,
 	#custom_html-8 {
 		background: $color__azure;
+
+		.widget-title {
+			margin: 10px 0 0;
+			font-weight: 400;
+			text-transform: uppercase;
+		}
 	}
 }
 
