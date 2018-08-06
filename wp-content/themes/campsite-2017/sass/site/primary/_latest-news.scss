@@ -19,6 +19,12 @@
 			position: relative;
 			min-height: 327px;
 
+			img {
+				&:first-child {
+					margin-bottom: 20px;
+				}
+			}
+
 			@media #{$break-medium} {
 				> * {
 					padding-left: 50%;
