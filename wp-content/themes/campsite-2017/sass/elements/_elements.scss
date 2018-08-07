@@ -16,12 +16,16 @@ body {
 
 .site-header {
 	position: relative;
-	padding-bottom: 200px;
+	padding-bottom: 80px;
 	background-color: $color__navy;
 	background-image: url('/wp-content/uploads/sites/2/2018/07/wcus-nashville-bg@2x.jpg');
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-size: 100%;
+
+	@media #{$break-small} {
+		padding-bottom: 200px;
+	}
 
 	> * {
 		position: relative;
@@ -46,6 +50,10 @@ body {
 
 .site-content {
 	background: #ffffff;
+}
+
+.content-area {
+	padding: 0 20px;
 }
 
 blockquote, q {

@@ -310,12 +310,15 @@ body {
 
 .site-header {
   position: relative;
-  padding-bottom: 200px;
+  padding-bottom: 80px;
   background-color: #10193F;
   background-image: url("/wp-content/uploads/sites/2/2018/07/wcus-nashville-bg@2x.jpg");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 100%; }
+  @media only screen and (min-width: 37.5em) {
+    .site-header {
+      padding-bottom: 200px; } }
   .site-header > * {
     position: relative; }
   .site-header:after {
@@ -334,6 +337,9 @@ body {
 
 .site-content {
   background: #ffffff; }
+
+.content-area {
+  padding: 0 20px; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -509,9 +515,6 @@ a {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation #primary-menu {
-  content: "";
-  display: table;
-  table-layout: fixed;
   font-size: 20px;
   font-size: 1.25rem;
   max-width: 1120px;
@@ -519,7 +522,13 @@ a {
   font-weight: 700;
   background: #C8EBEB;
   margin: 0 auto;
-  padding: 0 30px; }
+  padding: 0 30px 20px; }
+  @media only screen and (min-width: 37.5em) {
+    .main-navigation #primary-menu {
+      content: "";
+      display: table;
+      table-layout: fixed;
+      padding: 0 30px 0; } }
   .main-navigation #primary-menu li:hover, .main-navigation #primary-menu li.focus {
     background: #ffffff; }
     .main-navigation #primary-menu li:hover > a, .main-navigation #primary-menu li.focus > a {
@@ -548,25 +557,34 @@ a {
     margin-left: 10px; }
   .main-navigation #primary-menu > li > a {
     text-transform: uppercase;
-    padding: 25px 20px; }
+    padding: 10px 20px; }
+    @media only screen and (min-width: 37.5em) {
+      .main-navigation #primary-menu > li > a {
+        padding: 25px 20px; } }
     .main-navigation #primary-menu > li > a:hover, .main-navigation #primary-menu > li > a.focus {
       background: #ffffff; }
   .main-navigation #primary-menu .sub-menu {
     font-size: 18px;
     font-size: 1.125rem;
-    padding: 10px 20px 20px;
+    padding: 0px 20px 10px;
     font-weight: 400; }
+    @media only screen and (min-width: 37.5em) {
+      .main-navigation #primary-menu .sub-menu {
+        padding: 10px 20px 20px; } }
 
 .page-navigation-container {
   clear: both;
   display: block;
-  float: left;
-  width: 100%; }
+  width: 100%;
+  float: left; }
   .page-navigation-container ul {
-    display: none;
     list-style: none;
     margin: 0;
-    padding-left: 0; }
+    padding-left: 0;
+    display: none; }
+    .page-navigation-container ul ul {
+      padding: 10px 20px 20px; }
+  @media only screen and (min-width: 37.5em) {
     .page-navigation-container ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
@@ -574,7 +592,7 @@ a {
       top: 80px;
       left: -999em;
       z-index: 99999;
-      padding: 10 20px 20px;
+      padding: 10px 20px 20px;
       background: #ffffff; }
       .page-navigation-container ul ul ul {
         left: -999em;
@@ -586,10 +604,12 @@ a {
         width: 200px; }
     .page-navigation-container ul li:hover > ul,
     .page-navigation-container ul li.focus > ul {
-      left: auto; }
+      left: auto; } }
   .page-navigation-container li {
-    float: left;
     position: relative; }
+    @media only screen and (min-width: 37.5em) {
+      .page-navigation-container li {
+        float: left; } }
   .page-navigation-container a {
     display: block;
     text-decoration: none; }
@@ -598,13 +618,42 @@ a {
 .page-navigation-container.toggled-on ul {
   display: block; }
 
+.toggled-on .menu-toggle:after {
+  background-position: 0 -6px;
+  transform: rotate(-180deg); }
+
 .menu-toggle,
 .dropdown-toggle {
-  display: none; }
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: none;
+  background-color: #C8EBEB;
+  width: 100%;
+  border: 0px;
+  border-radius: 0;
+  text-transform: uppercase; }
+  .menu-toggle:after,
+  .dropdown-toggle:after {
+    transition: transform 0.25s ease-in;
+    content: '';
+    background-image: url("http://2018.wcus.wpengine.com/wp-content/uploads/sites/2/2018/07/dropdown-arrow.png");
+    background-size: 100%;
+    background-position: 0 0px;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 6px;
+    display: block;
+    float: right;
+    margin-top: 5px;
+    margin-left: 0px; }
 
 .js .menu-toggle,
 .js .dropdown-toggle {
   display: block; }
+
+.js .dropdown-toggle {
+  display: none; }
 
 @media screen and (min-width: 37.5em) {
   .js .menu-toggle,
@@ -740,29 +789,28 @@ a {
 #header-widgets {
   text-align: center;
   clear: both;
-  padding-top: 140px; }
-
-/*--------------------------------------------------------------
-## Header Widget Area 1
---------------------------------------------------------------*/
-#media_image-5 img {
-  box-shadow: 0 20px 18px 0 rgba(0, 0, 0, 0.5); }
-
-#custom_html-3 {
-  margin-top: -27px; }
-
-#custom_html-4 {
-  margin-top: -80px; }
-
-#text-10 {
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 1.5;
-  max-width: 540px;
-  margin: -10px auto 0;
-  background: #8D3D46;
-  color: #ffffff;
-  padding: 70px 20px 50px; }
+  padding-top: 40px; }
+  @media only screen and (min-width: 37.5em) {
+    #header-widgets {
+      padding-top: 140px; } }
+  #header-widgets section:first-child img {
+    box-shadow: 0 20px 18px 0 rgba(0, 0, 0, 0.5); }
+  #header-widgets section:nth-child(2) {
+    margin-top: -80px; }
+  #header-widgets section:nth-child(3) {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    max-width: 540px;
+    margin: -10px auto 0;
+    background: #8D3D46;
+    color: #ffffff;
+    padding: 40px 20px 40px; }
+    @media only screen and (min-width: 37.5em) {
+      #header-widgets section:nth-child(3) {
+        padding: 70px 20px 50px; } }
+  #header-widgets section:nth-child(4) {
+    margin-top: -27px; }
 
 /*--------------------------------------------------------------
 ## Header Widget Area 5 - Swoop Image
@@ -958,8 +1006,10 @@ a {
 .wcus-textwidget-narrow {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 130px 0 20px;
   position: relative; }
+  @media only screen and (min-width: 37.5em) {
+    .wcus-textwidget-narrow {
+      padding: 0 130px 0 20px; } }
   .wcus-textwidget-narrow h2 {
     color: #00627E;
     margin-bottom: 0; }
@@ -1017,6 +1067,9 @@ a {
     width: 100%;
     display: flex;
     justify-content: center; }
+    @media (max-width: 960px) and (min-width: 768px) {
+      #footer-widget-2 > * {
+        align-items: center; } }
     @media only screen and (min-width: 768px) {
       #footer-widget-2 > * {
         width: calc(33% - 20px);
@@ -1042,8 +1095,11 @@ a {
 
 .wcb_widget_sponsors {
   background-color: #ffffff;
-  padding: 20px 60px 30px;
-  text-align: center; }
+  text-align: center;
+  padding: 20px 20px 30px; }
+  @media only screen and (min-width: 768px) {
+    .wcb_widget_sponsors {
+      padding: 20px 60px 30px; } }
   .wcb_widget_sponsors .sponsor-level {
     display: flex;
     flex-direction: row;
@@ -1052,17 +1108,35 @@ a {
     .wcb_widget_sponsors .sponsor-level .sponsor-level-title {
       width: 100%; }
     .wcb_widget_sponsors .sponsor-level.diamond .sponsor-logo {
-      width: calc( 50% - 40px); }
+      width: 100%; }
+      @media only screen and (min-width: 768px) {
+        .wcb_widget_sponsors .sponsor-level.diamond .sponsor-logo {
+          width: calc( 50% - 40px); } }
     .wcb_widget_sponsors .sponsor-level.platinum .sponsor-logo {
-      width: calc( 33.333% - 40px); }
+      width: calc( 50% - 20px); }
+      @media only screen and (min-width: 768px) {
+        .wcb_widget_sponsors .sponsor-level.platinum .sponsor-logo {
+          width: calc( 33.333% - 40px); } }
     .wcb_widget_sponsors .sponsor-level.gold .sponsor-logo {
-      width: calc( 25% - 40px); }
+      width: calc( 33.333% - 20px); }
+      @media only screen and (min-width: 768px) {
+        .wcb_widget_sponsors .sponsor-level.gold .sponsor-logo {
+          width: calc( 25% - 40px); } }
     .wcb_widget_sponsors .sponsor-level.silver .sponsor-logo {
-      width: calc( 20% - 40px); }
+      width: calc( 25% - 20px); }
+      @media only screen and (min-width: 768px) {
+        .wcb_widget_sponsors .sponsor-level.silver .sponsor-logo {
+          width: calc( 20% - 40px); } }
     .wcb_widget_sponsors .sponsor-level.digital .sponsor-logo {
-      width: calc( 16.67% - 40px); }
+      width: calc( 20% - 20px); }
+      @media only screen and (min-width: 768px) {
+        .wcb_widget_sponsors .sponsor-level.digital .sponsor-logo {
+          width: calc( 16.67% - 40px); } }
     .wcb_widget_sponsors .sponsor-level .sponsor-logo {
-      margin: 10px 20px; }
+      margin: 10px; }
+      @media only screen and (min-width: 768px) {
+        .wcb_widget_sponsors .sponsor-level .sponsor-logo {
+          margin: 10px 20px; } }
       .wcb_widget_sponsors .sponsor-level .sponsor-logo img {
         width: 100%;
         max-height: 999px; }
@@ -1077,6 +1151,10 @@ a {
   text-align: center;
   text-transform: uppercase;
   line-height: 1; }
+  @media (max-width: 960px) and (min-width: 768px) {
+    .wcus-footer-social {
+      flex-wrap: wrap;
+      justify-content: center; } }
   .wcus-footer-social p {
     margin-bottom: 1em; }
   .wcus-footer-social .wcus-footer-hashtag {
@@ -1090,7 +1168,15 @@ a {
       .wcus-footer-social .wcus-footer-hashtag a:hover, .wcus-footer-social .wcus-footer-hashtag a:focus {
         text-decoration: underline; }
   .wcus-footer-social .wcus-footer-logo {
-    padding-right: 25px; }
+    padding-right: 25px;
+    display: flex;
+    align-items: center; }
+    @media (max-width: 960px) and (min-width: 768px) {
+      .wcus-footer-social .wcus-footer-logo {
+        padding-right: 0; } }
+    .wcus-footer-social .wcus-footer-logo svg {
+      width: 100%;
+      height: auto; }
   .wcus-footer-social .wcus-footer-icons {
     display: flex;
     flex-direction: row;
@@ -1142,8 +1228,12 @@ a {
 .blog .site-main {
   background-color: #EAE4E3;
   max-width: 1120px;
-  margin: 30px auto 50px;
-  padding: 35px 35px 20px; }
+  margin: 30px -20px 50px;
+  padding: 35px 20px 20px; }
+  @media only screen and (min-width: 37.5em) {
+    .blog .site-main {
+      margin: 30px auto 50px;
+      padding: 35px 35px 20px; } }
   .blog .site-main:before {
     content: 'Latest News';
     font-size: 30px;

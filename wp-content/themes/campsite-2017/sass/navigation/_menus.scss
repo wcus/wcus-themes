@@ -1,13 +1,17 @@
 .main-navigation {
 	#primary-menu {
-		@include clearfix;
 		@include font-size(1.25);
 		max-width: 1120px;
 		font-family: $font__main;
 		font-weight: 700;
 		background: $color__robin_blue;
 		margin: 0 auto;
-		padding: 0 30px;
+		padding: 0 30px 20px;
+
+		@media #{$break-small} {
+			@include clearfix;
+			padding: 0 30px 0;
+		}
 
 		li {
 			&:hover, &.focus {
@@ -61,7 +65,11 @@
 
 			> a {
 				text-transform: uppercase;
-				padding: 25px 20px;
+				padding: 10px 20px;
+
+				@media #{$break-small} {
+					padding: 25px 20px;
+				}
 
 				&:hover, &.focus {
 					background: $color__white;
@@ -71,8 +79,12 @@
 
 		.sub-menu {
 			@include font-size(1.125);
-			padding: 10px 20px 20px;
+			padding: 0px 20px 10px;
 			font-weight: 400;
+
+			@media #{$break-small} {
+				padding: 10px 20px 20px;
+			}
 		}
 	}
 }
@@ -80,59 +92,71 @@
 .page-navigation-container {
 	clear: both;
 	display: block;
-	float: left;
 	width: 100%;
+	float: left;
 
 	ul {
-		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		display: none;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 80px;
-			left: -999em;
-			z-index: 99999;
-			padding: 10 20px 20px;
-			background: $color__white;
+			padding: 10px 20px 20px;
+		}
+	}
+
+	@media #{$break-small} {
+		ul {
 
 			ul {
+				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+				float: left;
+				position: absolute;
+				top: 80px;
 				left: -999em;
-				top: 0;
-			}
+				z-index: 99999;
+				padding: 10px 20px 20px;
+				background: $color__white;
 
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
+				ul {
+					left: -999em;
+					top: 0;
+				}
+
+				li {
+					&:hover > ul,
+					&.focus > ul {
+						left: 100%;
+					}
+				}
+
+				a {
+					width: 200px;
+				}
+
+				:hover > a,
+				.focus > a {
+				}
+
+				a:hover,
+				a.focus {
 				}
 			}
 
-			a {
-				width: 200px;
+			li:hover > ul,
+			li.focus > ul {
+				left: auto;
 			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
 		}
 	}
 
 	li {
-		float: left;
 		position: relative;
+
+		@media #{$break-small} {
+			float: left;
+		}
 
 		&:hover > a,
 		&.focus > a {
@@ -156,14 +180,82 @@
 	display: block;
 }
 
+.toggled-on {
+	.menu-toggle {
+		&:after {
+			background-position: 0 -6px;
+			transform: rotate(-180deg);
+		}
+	}
+}
+
 .menu-toggle,
 .dropdown-toggle {
+  @include font-size(1.25);
+  font-weight: 700;
   display: none;
+  background-color: $color__robin_blue;
+  width: 100%;
+  border: 0px;
+  border-radius: 0;
+  text-transform: uppercase;
+
+  	&:after {
+		transition: transform 0.25s ease-in;
+		content: '';
+		background-image: url('http://2018.wcus.wpengine.com/wp-content/uploads/sites/2/2018/07/dropdown-arrow.png');
+		background-size: 100%;
+		background-position: 0 0px;
+		background-repeat: no-repeat;
+		width: 10px;
+		height: 6px;
+		display: block;
+		float: right;
+		margin-top: 5px;
+		margin-left: 0px;
+	}
+}
+
+.dropdown-toggle {
+	// width: auto;
+	// height: 44px;
+	// position: absolute;
+	// top: 50%;
+	// right: 0;
+	// margin-top: -22px;
+
+	// &:after {
+	// 	transition: transform 0.25s ease-in;
+	// 	content: '';
+	// 	background-image: url('http://2018.wcus.wpengine.com/wp-content/uploads/sites/2/2018/07/dropdown-arrow.png');
+	// 	background-size: 100%;
+	// 	background-position: 0 0px;
+	// 	background-repeat: no-repeat;
+	// 	width: 10px;
+	// 	height: 6px;
+	// 	display: block;
+	// 	float: right;
+	// 	margin-top: 0px;
+	// 	margin-left: 0px;
+	// }
+
+	// &.toggled-on {
+	// 	background-color: $color__white;
+
+	// 	&:after {
+	// 		background-position: 0 -6px;
+	// 		transform: rotate(-180deg);
+	// 	}
+	// }
 }
 
 .js .menu-toggle,
 .js .dropdown-toggle {
   display: block;
+}
+
+.js .dropdown-toggle {
+	display: none;
 }
 
 @media screen and (min-width: 37.5em) {

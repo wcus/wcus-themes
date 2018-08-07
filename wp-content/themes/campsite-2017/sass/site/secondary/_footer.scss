@@ -56,6 +56,10 @@
 		display: flex;
 		justify-content: center;
 
+		@media (max-width: 960px) and (min-width: 768px) {
+			align-items: center;
+		}
+
 		@media #{$break-medium} {
 			width: calc(33% - 20px);
 			flex: 1 0 auto;
@@ -97,8 +101,12 @@
 
 .wcb_widget_sponsors {
 	background-color: $color__white;
-	padding: 20px 60px 30px;
 	text-align: center;
+	padding: 20px 20px 30px;
+
+	@media #{$break-medium} {
+		padding: 20px 60px 30px;
+	}
 
 	.sponsor-level {
 		display: flex;
@@ -112,36 +120,61 @@
 
 		&.diamond {
 			.sponsor-logo{
-				width: calc( 50% - 40px );
+				width: 100%;
+
+				@media #{$break-medium} {
+					width: calc( 50% - 40px );
+				}
+				
 			}
 		}
 
 		&.platinum {
 			.sponsor-logo{
-				width: calc( 33.333% - 40px );
+				width: calc( 50% - 20px );
+
+				@media #{$break-medium} {
+					width: calc( 33.333% - 40px );
+				}
 			}
 		}
 
 		&.gold {
 			.sponsor-logo{
-				width: calc( 25% - 40px );
+				width: calc( 33.333% - 20px );
+
+				@media #{$break-medium} {
+					width: calc( 25% - 40px );
+				}
 			}
 		}
 
 		&.silver {
 			.sponsor-logo{
-				width: calc( 20% - 40px );
+				width: calc( 25% - 20px );
+
+				@media #{$break-medium} {
+					width: calc( 20% - 40px );
+				}
 			}
 		}
 
 		&.digital {
 			.sponsor-logo{
-				width: calc( 16.67% - 40px );
+				width: calc( 20% - 20px );
+
+				@media #{$break-medium} {
+					width: calc( 16.67% - 40px );
+				}
 			}
 		}
 
 		.sponsor-logo {
-			margin: 10px 20px;
+			margin: 10px;
+
+			@media #{$break-medium} {
+				margin: 10px 20px;
+			}
 
 			img {
 				width: 100%;
@@ -160,6 +193,11 @@
 	text-align: center;
 	text-transform: uppercase;
 	line-height: 1;
+
+	@media (max-width: 960px) and (min-width: 768px) {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 
 	p {
 		margin-bottom: 1em;
@@ -182,6 +220,17 @@
 
 	.wcus-footer-logo {
 		padding-right: 25px;
+		display: flex;
+		align-items: center;
+
+		@media (max-width: 960px) and (min-width: 768px) {
+			padding-right: 0;
+		}
+
+		svg {
+			width: 100%;
+			height: auto;
+		}
 	}
 
 	.wcus-footer-icons {

@@ -25,35 +25,44 @@
 #header-widgets {
 	text-align: center;
 	clear: both;
-	padding-top: 140px;
-}
+	padding-top: 40px;
+	
+	@media #{$break-small} {
+		padding-top: 140px;
+	}
 
-/*--------------------------------------------------------------
-## Header Widget Area 1
---------------------------------------------------------------*/
-#media_image-5 img {
-	box-shadow: 0 20px 18px 0 rgba(0,0,0,0.50);
-}
+	section {
+		&:first-child {
+			img {
+				box-shadow: 0 20px 18px 0 rgba(0,0,0,0.50);
+			}
+		}
 
-// Social Icons
-#custom_html-3 {
-	margin-top: -27px;
-}
+		&:nth-child(2) {
+			// CTA Button
+			margin-top: -80px;
+		}
 
-// CTA Button
-#custom_html-4 {
-	margin-top: -80px;
-}
+		// Callout text
+		&:nth-child(3) {
+			@include font-size(1.125);
+			line-height: 1.5;
+			max-width: 540px;
+			margin: -10px auto 0;
+			background: $color__berry;
+			color: $color__white;
+			padding: 40px 20px 40px;
 
-// Callout text
-#text-10 {
-	@include font-size(1.125);
-	line-height: 1.5;
-	max-width: 540px;
-	margin: -10px auto 0;
-	background: $color__berry;
-	color: $color__white;
-	padding: 70px 20px 50px;
+			@media #{$break-small} {
+				padding: 70px 20px 50px;
+			}
+		}
+
+		// Social Icons
+		&:nth-child(4) {
+			margin-top: -27px;
+		}
+	}
 }
 
 /*--------------------------------------------------------------
