@@ -271,9 +271,10 @@
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
+	max-width: 800px;
 
 	.site-main & {
-		margin: 0 0 1.5em;
+		margin: 0 auto 1.5em;
 		overflow: hidden;
 	}
 

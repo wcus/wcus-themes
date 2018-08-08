@@ -99,7 +99,11 @@
 	#subscribe-text {
 		width: 100%;
 		p {
-			margin: 0 0 3px;
+			margin: 10px 0 3px;
+
+			@media #{$break-small} {
+				margin: 0 0 3px;
+			}
 		}
 	}
 
@@ -110,6 +114,11 @@
 
 		#subscribe-email {
 			flex: 1 0 auto;
+			margin-bottom: 5px;
+
+			@media #{$break-small} {
+				margin-bottom: 24px;
+			}
 
 			input {
 				width: 100%;
@@ -120,8 +129,14 @@
 
 		#subscribe-submit {
 			flex: 0 1 auto;
+			width: 100%;
+
+			@media #{$break-small} {
+				width: auto;
+			}
 
 			input[type="submit"] {
+				@include font-size(0.875);
 				font-family: $font__main;
 				font-weight: 700;
 				width: 100%;
@@ -130,9 +145,13 @@
 				height: 100%;
 				border-radius: 100px;
 				border: 0px;
-				margin-left: 8px;
 				text-transform: uppercase;
-				padding: .6em 40px .4em;
+				padding: 10px 40px 10px;
+
+				@media #{$break-small} {
+					margin-left: 8px;
+					padding: 7px 40px 5px;
+				}
 
 				&:hover, &:focus {
 					background-color: $color__white;

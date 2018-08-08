@@ -23,7 +23,27 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	@include font-size(1.125);
+	line-height: 1.5;
+	
+	> * {
+		margin: 1.5em auto;
+		max-width: 800px;
+	}
+
+	.alignfull {
+		max-width: 100%;
+	}
+
+	.alignwide {
+		max-width: 1120px;
+	}
+}
+
+.entry-header,
+.entry-footer {
+	margin: 0 auto;
+	max-width: 800px;
 }
 
 .page-links {
