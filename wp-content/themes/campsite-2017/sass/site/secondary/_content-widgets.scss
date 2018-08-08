@@ -60,6 +60,10 @@
 			font-size: 1.75vw;
 		}
 
+		@media #{$break-large} {
+			font-size: 22px;
+		}
+
 		&:before {
 			transition: all 0.25s ease-in-out;
 			content: '';
@@ -152,6 +156,10 @@
 			margin: 0;
 			text-transform: uppercase;
 			position: relative;
+
+			@media #{$break-large} {
+				font-size: 44px;
+			}
 
 			&:after {
 				content: '';
