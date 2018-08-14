@@ -25,10 +25,14 @@
 #header-widgets {
 	text-align: center;
 	clear: both;
-	padding-top: 40px;
+	padding-top: 30px;
 	
-	@media #{$break-small} {
-		padding-top: 140px;
+	.home {
+		padding-top: 30px;
+	
+		@media #{$break-small} {
+			padding-top: 140px;
+		}
 	}
 
 	section {

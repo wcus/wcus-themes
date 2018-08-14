@@ -9,20 +9,23 @@ $color__squash: #F68C36;
 $color__azure: #00627E;
 $color__navy: #10193F;
 $color__white: #ffffff;
+$color__white_transparency: #ffffffe6;
+$color__dark_gray: #979797;
+$color__gray: #d8d8d8;
 
 // _s color variables
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
 $color__background-button: #e6e6e6;
-$color__background-pre: #eee;
+$color__background-pre: $color__taupe;
 $color__background-ins: #fff9c0;
 
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
 $color__link: $color__jam;
-$color__link-visited: $color__navy;
+$color__link-visited: $color__pumpkin;
 $color__link-hover: $color__azure;
 $color__text-main: $color__charcoal;
 

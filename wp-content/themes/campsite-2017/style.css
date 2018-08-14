@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: CampSite 2017
 Theme URI: http://underscores.me/
@@ -258,26 +259,119 @@ dfn, cite, em, i {
   font-style: italic; }
 
 blockquote {
-  margin: 0 1.5em; }
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-family: "BioRhyme", Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  max-width: 540px;
+  padding: 0 0 0 60px;
+  margin: 0 auto;
+  border-width: 4px 0 4px 0;
+  border-style: solid;
+  border-color: #EAE4E3;
+  position: relative; }
+  @media only screen and (min-width: 37.5em) {
+    blockquote {
+      font-size: 26px;
+      font-size: 1.625rem;
+      padding: 0 100px; } }
+  @media only screen and (min-width: 768px) {
+    blockquote {
+      padding: 0 40px; } }
+  blockquote > * {
+    margin: 1em 0; }
+  blockquote:before, blockquote:after {
+    color: #BF6347;
+    font-family: "BioRhyme", Georgia, "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 80px;
+    font-size: 5rem;
+    letter-spacing: 0.45px;
+    line-height: 1;
+    position: absolute;
+    top: 13px; }
+    @media only screen and (min-width: 37.5em) {
+      blockquote:before, blockquote:after {
+        font-size: 160px;
+        font-size: 10rem;
+        top: 0; } }
+  blockquote:before {
+    content: '“';
+    left: 0px; }
+    @media only screen and (min-width: 768px) {
+      blockquote:before {
+        left: -50px; } }
+  blockquote:after {
+    content: '”';
+    right: 0px;
+    display: none; }
+    @media only screen and (min-width: 37.5em) {
+      blockquote:after {
+        display: block; } }
+    @media only screen and (min-width: 768px) {
+      blockquote:after {
+        right: -50px; } }
+  blockquote cite {
+    margin-top: 40px;
+    font-size: 16px;
+    font-size: 1rem;
+    color: #722247;
+    letter-spacing: 0.08px;
+    text-align: center; }
+    @media only screen and (min-width: 37.5em) {
+      blockquote cite {
+        font-size: 20px;
+        font-size: 1.25rem; } }
+
+.wcus-blockquote {
+  margin: 0 1.5em;
+  background-color: #EAE4E3;
+  padding: 60px 90px;
+  position: relative; }
+  .wcus-blockquote:before, .wcus-blockquote:after {
+    color: #BF6347;
+    font-family: "BioRhyme", Georgia, "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 100px;
+    font-size: 6.25rem;
+    letter-spacing: 0.45px;
+    line-height: 1;
+    position: absolute; }
+  .wcus-blockquote:before {
+    content: '“';
+    top: 50px;
+    left: 20px; }
+  .wcus-blockquote:after {
+    content: '”';
+    bottom: 0px;
+    right: 20px; }
+  .wcus-blockquote p:last-child() {
+    margin-bottom: 0; }
+  .wcus-blockquote cite {
+    margin-top: 40px;
+    font-size: 18px;
+    font-size: 1.125rem;
+    color: #722247;
+    letter-spacing: 0.08px;
+    text-align: center; }
 
 address {
   margin: 0 0 1.5em; }
 
 pre {
-  background: #eee;
-  font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
+  background: #EAE4E3;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   line-height: 1.6;
   margin-bottom: 1.6em;
   max-width: 100%;
   overflow: auto;
-  padding: 1.6em; }
+  padding: 1.6em;
+  border-left: 5px solid #00627E; }
 
 code, kbd, tt, var {
-  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 15px;
-  font-size: 0.9375rem; }
+  background: #EAE4E3;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 1.6; }
 
 abbr, acronym {
   border-bottom: 1px dotted #666;
@@ -310,7 +404,7 @@ body {
 
 .site-header {
   position: relative;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   background-color: #10193F;
   background-image: url("/wp-content/uploads/sites/2/2018/07/wcus-nashville-bg@2x.jpg");
   background-position: center top;
@@ -318,7 +412,12 @@ body {
   background-size: 100%; }
   @media only screen and (min-width: 37.5em) {
     .site-header {
-      padding-bottom: 200px; } }
+      padding-bottom: 120px; } }
+  .home .site-header {
+    padding-bottom: 80px; }
+    @media only screen and (min-width: 37.5em) {
+      .home .site-header {
+        padding-bottom: 200px; } }
   .site-header > * {
     position: relative; }
   .site-header:after {
@@ -331,7 +430,7 @@ body {
     background-position: center bottom;
     background-size: 101%;
     width: 100%;
-    height: 330px;
+    height: 20vw;
     display: block;
     z-index: 1; }
 
@@ -343,8 +442,6 @@ body {
 
 blockquote, q {
   quotes: "" ""; }
-  blockquote:before, blockquote:after, q:before, q:after {
-    content: ""; }
 
 hr {
   background-color: #ccc;
@@ -354,11 +451,33 @@ hr {
 
 ul, ol {
   margin: 0 0 1.5em 3em; }
+  ul ul, ul ol, ol ul, ol ol {
+    margin-top: 1em; }
   ul li, ol li {
     margin-bottom: 1em; }
 
 ul {
-  list-style: disc; }
+  list-style-type: none; }
+  ul li {
+    position: relative; }
+    ul li:before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      display: block;
+      border-radius: 100px;
+      background-color: #00627E;
+      position: absolute;
+      top: 6px;
+      left: -27px; }
+  ul ul {
+    list-style-type: none; }
+    ul ul li:before {
+      background-color: #d8d8d8; }
+    ul ul ul {
+      list-style-type: disc; }
+      ul ul ul li:before {
+        display: none; }
 
 ol {
   list-style: decimal; }
@@ -386,7 +505,24 @@ figure {
 
 table {
   margin: 0 0 1.5em;
-  width: 100%; }
+  width: 100%;
+  border: 2px solid #979797; }
+
+thead {
+  font-size: 18px;
+  font-size: 1.125rem;
+  background-color: #00627E;
+  color: #ffffff; }
+
+tbody tr:nth-child(odd) {
+  background-color: #d8d8d8; }
+
+th {
+  text-align: left; }
+
+th, td {
+  padding: 10px 20px;
+  font-weight: 400; }
 
 .wcus-button {
   font-size: 14px;
@@ -505,7 +641,7 @@ textarea {
 a {
   color: #722247; }
   a:visited {
-    color: #10193F; }
+    color: #BF6347; }
   a:hover, a:focus, a:active {
     color: #00627E; }
   a:focus {
@@ -586,6 +722,8 @@ a {
     margin: 0;
     padding-left: 0;
     display: none; }
+    .page-navigation-container ul li:before {
+      display: none; }
     .page-navigation-container ul ul {
       padding: 10px 20px 20px; }
   @media only screen and (min-width: 37.5em) {
@@ -675,17 +813,49 @@ a {
   .post-navigation {
     margin: 0 auto 1.5em;
     overflow: hidden; }
-  .comment-navigation .nav-previous,
-  .posts-navigation .nav-previous,
-  .post-navigation .nav-previous {
-    float: left;
-    width: 50%; }
-  .comment-navigation .nav-next,
-  .posts-navigation .nav-next,
-  .post-navigation .nav-next {
-    float: right;
-    text-align: right;
-    width: 50%; }
+  .comment-navigation .nav-previous:before,
+  .comment-navigation .nav-next:before,
+  .posts-navigation .nav-previous:before,
+  .posts-navigation .nav-next:before,
+  .post-navigation .nav-previous:before,
+  .post-navigation .nav-next:before {
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    color: #979797; }
+  .comment-navigation .nav-previous:before,
+  .posts-navigation .nav-previous:before,
+  .post-navigation .nav-previous:before {
+    content: 'Previous'; }
+  @media only screen and (min-width: 37.5em) {
+    .comment-navigation .nav-previous,
+    .posts-navigation .nav-previous,
+    .post-navigation .nav-previous {
+      float: left;
+      width: 50%;
+      max-width: 320px;
+      padding-right: 20px; }
+      .comment-navigation .nav-previous:before,
+      .posts-navigation .nav-previous:before,
+      .post-navigation .nav-previous:before {
+        content: ''; } }
+  .comment-navigation .nav-next:before,
+  .posts-navigation .nav-next:before,
+  .post-navigation .nav-next:before {
+    content: 'Next'; }
+  @media only screen and (min-width: 37.5em) {
+    .comment-navigation .nav-next,
+    .posts-navigation .nav-next,
+    .post-navigation .nav-next {
+      float: right;
+      text-align: right;
+      width: 50%;
+      max-width: 320px;
+      padding-left: 20px; }
+      .comment-navigation .nav-next:before,
+      .posts-navigation .nav-next:before,
+      .post-navigation .nav-next:before {
+        content: ''; } }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -795,10 +965,12 @@ a {
 #header-widgets {
   text-align: center;
   clear: both;
-  padding-top: 40px; }
-  @media only screen and (min-width: 37.5em) {
-    #header-widgets {
-      padding-top: 140px; } }
+  padding-top: 30px; }
+  #header-widgets .home {
+    padding-top: 30px; }
+    @media only screen and (min-width: 37.5em) {
+      #header-widgets .home {
+        padding-top: 140px; } }
   #header-widgets section:first-child img {
     box-shadow: 0 20px 18px 0 rgba(0, 0, 0, 0.5); }
   #header-widgets section:nth-child(2) {
@@ -1126,7 +1298,7 @@ a {
       content: ''; }
 
 .wcb_widget_sponsors {
-  background-color: #ffffff;
+  background-color: #ffffffe6;
   text-align: center;
   padding: 20px 20px 30px; }
   @media only screen and (min-width: 768px) {
@@ -1236,9 +1408,31 @@ a {
 .hentry {
   margin: 0 0 1.5em; }
 
+.entry-title {
+  font-size: 36px;
+  font-size: 2.25rem;
+  color: #00627E;
+  margin-top: 0;
+  text-align: center;
+  text-transform: uppercase; }
+
 .posted-on a {
   display: inline-block;
   /* Remove unwanted whitespace; see https://stackoverflow.com/a/10203529/450127 */ }
+
+.entry-meta {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 20px; }
+  .single .entry-meta {
+    margin-bottom: 0; }
+  .entry-meta a {
+    color: #00627E;
+    text-decoration: none; }
+    .entry-meta a:hover, .entry-meta a:focus {
+      text-decoration: underline;
+      color: #722247; }
 
 .byline,
 .updated:not(.published) {
@@ -1257,15 +1451,26 @@ a {
   .page-content > *,
   .entry-content > *,
   .entry-summary > * {
-    margin: 1.5em auto;
+    margin: 40px auto;
     max-width: 800px; }
+  .page-content blockquote,
+  .entry-content blockquote,
+  .entry-summary blockquote {
+    max-width: 540px;
+    margin: 0 auto; }
   .page-content .alignfull,
+  .page-content blockquote.alignfull,
   .entry-content .alignfull,
-  .entry-summary .alignfull {
+  .entry-content blockquote.alignfull,
+  .entry-summary .alignfull,
+  .entry-summary blockquote.alignfull {
     max-width: 100%; }
   .page-content .alignwide,
+  .page-content blockquote.alignwide,
   .entry-content .alignwide,
-  .entry-summary .alignwide {
+  .entry-content blockquote.alignwide,
+  .entry-summary .alignwide,
+  .entry-summary blockquote.alignwide {
     max-width: 1120px; }
 
 .entry-header,
@@ -1318,7 +1523,8 @@ a {
     text-transform: uppercase;
     padding-top: 10px;
     margin-top: 0;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    text-align: left; }
     .blog .site-main .entry-title a {
       color: #10193F;
       text-decoration: none; }
@@ -1327,18 +1533,6 @@ a {
         text-decoration: underline; }
       .blog .site-main .entry-title a:visited {
         color: #00627E; }
-  .blog .site-main .entry-meta {
-    font-size: 14px;
-    font-size: 0.875rem;
-    margin-bottom: 20px; }
-    .blog .site-main .entry-meta a {
-      color: #00627E;
-      text-decoration: none; }
-      .blog .site-main .entry-meta a:hover, .blog .site-main .entry-meta a:focus {
-        text-decoration: underline;
-        color: #722247; }
-    .blog .site-main .entry-meta time {
-      text-transform: uppercase; }
   .blog .site-main .entry-content {
     margin-top: 0; }
     .blog .site-main .entry-content > *:first-child {
@@ -1358,13 +1552,96 @@ a {
 --------------------------------------------------------------*/
 #comments {
   max-width: 800px;
-  margin: 0 auto; }
+  margin: 40px auto 20px; }
+  #comments #reply-title {
+    font-size: 26px;
+    font-size: 1.625rem;
+    font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-transform: uppercase;
+    color: #10193F;
+    margin-bottom: 0; }
+  #comments form {
+    padding: 10px 0 20px;
+    max-width: 660px;
+    margin: 0 auto; }
+  #comments input,
+  #comments textarea {
+    background-color: #EAE4E3;
+    border-radius: 6px;
+    border-width: 0px;
+    padding: 8px 10px 7px; }
+    #comments input[type="submit"],
+    #comments textarea[type="submit"] {
+      font-size: 18px;
+      font-size: 1.125rem;
+      font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      background-color: #F68C36;
+      border-radius: 100px;
+      color: #ffffff;
+      padding: 12px 30px 11px; }
+      #comments input[type="submit"]:hover, #comments input[type="submit"]:focus,
+      #comments textarea[type="submit"]:hover,
+      #comments textarea[type="submit"]:focus {
+        background-color: #00627E; }
+  #comments textarea {
+    display: block; }
+  #comments .comment-form-comment,
+  #comments .comment-form-author,
+  #comments .comment-form-email,
+  #comments .comment-form-url {
+    margin: 10px 0; }
+  #comments .comment-form-author,
+  #comments .comment-form-email,
+  #comments .comment-form-url {
+    display: flex; }
+    #comments .comment-form-author label,
+    #comments .comment-form-email label,
+    #comments .comment-form-url label {
+      flex: 0 1 90px; }
+    #comments .comment-form-author input,
+    #comments .comment-form-email input,
+    #comments .comment-form-url input {
+      flex: 1 0 auto; }
+  #comments .form-submit {
+    text-align: right; }
+  #comments label {
+    font-size: 18px;
+    font-size: 1.125rem; }
+  #comments label[for="comment"] {
+    display: block;
+    margin-bottom: 6px;
+    margin-left: 6px; }
 
 .comment-content a {
   word-wrap: break-word; }
 
 .bypostauthor {
   display: block; }
+
+.comment-list li {
+  list-style-type: none; }
+
+.comment-author {
+  font-size: 20px;
+  font-size: 1.25rem;
+  margin-left: -42px;
+  display: flex; }
+  .comment-author img {
+    margin-right: 10px; }
+  .comment-author .fn {
+    margin-right: 5px; }
+
+.comment {
+  margin-bottom: 3em; }
+
+.comment-body {
+  margin-bottom: 2em; }
+
+.comment-metadata {
+  font-size: 14px;
+  font-size: 0.875rem; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

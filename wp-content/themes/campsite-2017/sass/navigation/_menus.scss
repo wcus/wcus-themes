@@ -103,6 +103,12 @@
 		padding-left: 0;
 		display: none;
 
+		li {
+			&:before {
+				display: none;
+			}
+		}
+
 		ul {
 			padding: 10px 20px 20px;
 		}
@@ -280,14 +286,47 @@
 		overflow: hidden;
 	}
 
+	.nav-previous,
+	.nav-next {
+		&:before {
+			display: block;
+			@include font-size(.875);
+			color: $color__dark_gray;
+		}
+	}
+
 	.nav-previous {
-		float: left;
-		width: 50%;
+		&:before {
+			content: 'Previous';
+		}
+
+		@media #{$break-small} {
+			float: left;
+			width: 50%;
+			max-width: 320px;
+			padding-right: 20px;
+
+			&:before {
+				content: '';
+			}
+		}
 	}
 
 	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
+		&:before {
+			content: 'Next';
+		}
+
+		@media #{$break-small} {
+			float: right;
+			text-align: right;
+			width: 50%;
+			max-width: 320px;
+			padding-left: 20px;
+
+			&:before {
+				content: '';
+			}
+		}
 	}
 }

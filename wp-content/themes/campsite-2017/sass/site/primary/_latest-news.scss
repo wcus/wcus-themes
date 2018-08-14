@@ -57,6 +57,7 @@
 			padding-top: 10px;
 			margin-top: 0;
 			margin-bottom: 0;
+			text-align: left;
 			
 			a {
 				color: $color__navy;
@@ -70,31 +71,6 @@
 				&:visited {
 					color: $color__azure;
 				}
-			}
-		}
-
-		.entry-meta {
-			@include font-size(0.875);
-			//position: absolute;
-			//top: 10px;
-			margin-bottom: 20px;
-
-			a {
-				color: $color__azure;
-				text-decoration: none;
-
-				&:hover, &:focus {
-					text-decoration: underline;
-					color: $color__jam;
-				}
-			}
-
-			time {
-				text-transform: uppercase;
-			}
-
-			.byline {
-				//display: none;
 			}
 		}
 

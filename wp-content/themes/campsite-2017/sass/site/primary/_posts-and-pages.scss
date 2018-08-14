@@ -6,8 +6,44 @@
 	margin: 0 0 1.5em;
 }
 
+.entry-title {
+	@include font-size(2.25);
+	color: $color__azure;
+	margin-top: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
 .posted-on a {
 	display: inline-block; /* Remove unwanted whitespace; see https://stackoverflow.com/a/10203529/450127 */
+}
+
+.entry-meta {
+	@include font-size(0.875);
+	font-weight: 700;
+	margin-bottom: 20px;
+
+	.single & {
+		margin-bottom: 0;
+	}
+
+	a {
+		color: $color__azure;
+		text-decoration: none;
+
+		&:hover, &:focus {
+			text-decoration: underline;
+			color: $color__jam;
+		}
+	}
+
+	time {
+		//text-transform: uppercase;
+	}
+
+	.byline {
+		//display: none;
+	}
 }
 
 .byline,
@@ -27,15 +63,22 @@
 	line-height: 1.5;
 	
 	> * {
-		margin: 1.5em auto;
+		margin: 40px auto;
 		max-width: 800px;
 	}
 
-	.alignfull {
+	blockquote {
+		max-width: 540px;
+		margin: 0 auto;
+	}
+
+	.alignfull,
+	blockquote.alignfull {
 		max-width: 100%;
 	}
 
-	.alignwide {
+	.alignwide,
+	blockquote.alignwide {
 		max-width: 1120px;
 	}
 }
