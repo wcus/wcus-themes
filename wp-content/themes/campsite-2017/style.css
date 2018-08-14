@@ -539,6 +539,8 @@ th, td {
   .wcus-button:hover, .wcus-button:focus {
     color: #10193F;
     background: #ffffff; }
+  .wcus-button:visited {
+    color: #00627E; }
 
 .wcus-social-button {
   background-image: url("https://2018.wcus.test/wp-content/uploads/sites/2/2018/07/social-icons.png");
