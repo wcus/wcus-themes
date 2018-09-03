@@ -1,16 +1,16 @@
 .main-navigation {
 	#primary-menu {
-		@include font-size(1.25);
+		@include font-size(1);
 		max-width: 1120px;
 		font-family: $font__main;
 		font-weight: 700;
 		background: $color__robin_blue;
 		margin: 0 auto;
-		padding: 0 30px 20px;
+		padding: 0 20px 20px;
 
 		@media #{$break-small} {
 			@include clearfix;
-			padding: 0 30px 0;
+			padding: 0 20px 0;
 		}
 
 		li {
@@ -80,12 +80,17 @@
 		}
 
 		.sub-menu {
+			padding: 0;
 			@include font-size(1.125);
-			padding: 0px 20px 10px;
 			font-weight: 400;
+			list-style-type: none;
 
-			@media #{$break-small} {
-				padding: 10px 20px 20px;
+			li {
+				padding: 10px 20px 10px;
+
+				&:hover, &.focus {
+					background-color: #f4f4f4;
+				}
 			}
 		}
 	}
@@ -121,7 +126,7 @@
 				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 				float: left;
 				position: absolute;
-				top: 80px;
+				top: 74px;
 				left: -999em;
 				z-index: 99999;
 				padding: 10px 20px 20px;
