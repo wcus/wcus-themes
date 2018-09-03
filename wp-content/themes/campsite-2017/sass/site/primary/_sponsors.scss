@@ -1,0 +1,154 @@
+h2.wcus-bordered-heading {
+    padding: 7px 20px;
+    display: flex;
+    align-items: center;
+    background: $color__charcoal;
+    color: $color__white;
+    font-family: $font__sec;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.14px;
+}
+
+.wcorg-sponsors {
+    > div {
+        margin-top: 40px;
+    }
+
+    h2 {
+        padding: 7px 20px;
+        display: flex;
+        align-items: center;
+        background: $color__navy;
+        color: $color__white;
+        font-family: $font__sec;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 0.14px;
+
+        &:before,
+        &:after {
+            content: '';
+            flex: 1 0 auto;
+            padding: 0 10px;
+            height: 4px;
+            background: $color__white;
+        }
+
+        &:before {
+            margin-right: 20px;
+        }
+
+        &:after {
+            margin-left: 20px;
+        }
+    }
+
+    .wcorg-sponsor-description {
+            img {
+                float: right;
+                margin-bottom: 20px;
+
+                + p {
+                    clear: both;
+                }
+            }
+        }
+
+    .wcorg-sponsor-level-diamond {
+        h2,
+        h3:after {
+            background-color: $color__jam;
+        }
+
+        h3 {
+            color: $color__jam;
+        }
+
+        .wcorg-sponsor-description {
+            img {
+                max-height: 200px;
+            }
+        }
+    }
+
+    .wcorg-sponsor-level-platinum {
+        h2,
+        h3:after {
+            background-color: $color__pumpkin;
+        }
+
+        h3 {
+            color: $color__pumpkin;
+        }
+
+        .wcorg-sponsor-description {
+            img {
+                max-height: 130px;
+            }
+        }
+    }
+
+    .wcorg-sponsor-level-gold {
+        h2,
+        h3:after {
+            background-color: $color__squash;
+        }
+
+        h3 {
+            color: $color__squash;
+        }
+
+        .wcorg-sponsor-description {
+            img {
+                max-height: 110px;
+            }
+        }
+    }
+
+    .wcorg-sponsor-level-silver {
+        h2,
+        h3:after {
+            background-color: $color__berry;
+        }
+
+        h3 {
+            color: $color__berry;
+        }
+
+        .wcorg-sponsor-description {
+            img {
+                max-height: 90px;
+            }
+        }
+    }
+
+    .wcorg-sponsor-level-digital {
+        .wcorg-sponsor-description {
+            img {
+                max-height: 70px;
+            }
+        }
+    }
+}
+
+.wcorg-sponsor {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background: $color__taupe;
+
+    h3 {
+        display: flex;
+        align-items: center;
+        margin-top: 0;
+
+        &:after {
+            content: '';
+            flex: 1 0 auto;
+            height: 4px;
+            background-color: $color__navy;
+            margin-left: 20px;
+        }
+    }
+}

@@ -65,6 +65,10 @@
 	> * {
 		margin: 40px auto;
 		max-width: 800px;
+
+		&.wcorg-sponsors {
+			max-width: 1140px;
+		}
 	}
 
 	blockquote {
@@ -92,4 +96,69 @@
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+# Gutenberg
+--------------------------------------------------------------*/
+.wp-block-image {
+	&.alignleft,
+	&.alignright {
+		display: block;
+		float: none;
+		width: 100%;
+
+		> * {
+			&:last-child {
+				margin-bottom: 1.5em;
+			}
+		}
+
+		img, 
+		figcaption {
+			display: block;
+			width: 40%;
+			max-width: 40%;
+		}
+	}
+
+	&.alignleft {
+		img,
+		figcaption {
+			float: left;
+			margin-right: 1.5em;
+		}
+
+		figcaption {
+			clear: left;
+		}
+	}
+
+	&.alignright {
+		img,
+		figcaption {
+			float: right;
+			margin-left: 1.5em;
+		}
+
+		figcaption {
+			clear: right;
+		}
+	}
+}
+
+.wp-block-separator {
+	clear: both;
+}
+
+.wp-block-button {
+	&.alignleft,
+	&.alignright {
+		display: block;
+		float: none;
+	}
+
+	&.alignright {
+		text-align: right;
+	}
 }

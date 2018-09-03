@@ -423,9 +423,9 @@ body {
   .site-header:after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
-    background-image: url("https://jasonyingling.me/dev/svg/top-arch.svg");
+    background-image: url("https://2018.us.wordcamp.org/files/2018/08/top-arch.png");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: 101%;
@@ -456,11 +456,11 @@ ul, ol {
   ul li, ol li {
     margin-bottom: 1em; }
 
-ul {
+ul:not(.wp-block-gallery) {
   list-style-type: none; }
-  ul li {
+  ul:not(.wp-block-gallery) li {
     position: relative; }
-    ul li:before {
+    ul:not(.wp-block-gallery) li:before {
       content: '';
       width: 12px;
       height: 12px;
@@ -470,13 +470,13 @@ ul {
       position: absolute;
       top: 6px;
       left: -27px; }
-  ul ul {
+  ul:not(.wp-block-gallery) ul {
     list-style-type: none; }
-    ul ul li:before {
+    ul:not(.wp-block-gallery) ul li:before {
       background-color: #d8d8d8; }
-    ul ul ul {
+    ul:not(.wp-block-gallery) ul ul {
       list-style-type: disc; }
-      ul ul ul li:before {
+      ul:not(.wp-block-gallery) ul ul li:before {
         display: none; }
 
 ol {
@@ -543,7 +543,7 @@ th, td {
     color: #00627E; }
 
 .wcus-social-button {
-  background-image: url("https://2018.wcus.test/wp-content/uploads/sites/2/2018/07/social-icons.png");
+  background-image: url("https://2018.us.wordcamp.org/files/2018/08/social-icons.png");
   background-size: auto 54px;
   background-repeat: no-repeat;
   display: inline-block;
@@ -559,6 +559,24 @@ th, td {
 
 .wcus-social-button--instagram {
   background-position: -140px 0; }
+
+#eu-cookie-law {
+  background: #F68C36;
+  color: #111111;
+  border: 1px solid #F68C36;
+  padding: 20px; }
+  #eu-cookie-law input {
+    background: #F68C36;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 18px;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    padding: 7px 20px; }
+    #eu-cookie-law input:hover, #eu-cookie-law input:focus {
+      background-color: #ffffff;
+      color: #F68C36; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -781,7 +799,7 @@ a {
   .dropdown-toggle:after {
     transition: transform 0.25s ease-in;
     content: '';
-    background-image: url("http://2018.wcus.wpengine.com/wp-content/uploads/sites/2/2018/07/dropdown-arrow.png");
+    background-image: url("https://2018.us.wordcamp.org/files/2018/08/dropdown-arrow.png");
     background-size: 100%;
     background-position: 0 0px;
     background-repeat: no-repeat;
@@ -1228,7 +1246,7 @@ a {
 
 .site-footer {
   background-color: #10193F;
-  background-image: url("https://2018.wcus.wpengine.com/wp-content/uploads/sites/2/2018/08/footer-bg@2x.jpg");
+  background-image: url("https://2018.us.wordcamp.org/files/2018/08/footer-bg@2x.jpg");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -1239,7 +1257,7 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("https://jasonyingling.me/dev/svg/footer-arch.svg");
+    background-image: url("https://2018.us.wordcamp.org/files/2018/08/footer-arch.png");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 100%;
@@ -1459,6 +1477,10 @@ a {
   .entry-summary > * {
     margin: 40px auto;
     max-width: 800px; }
+    .page-content > *.wcorg-sponsors,
+    .entry-content > *.wcorg-sponsors,
+    .entry-summary > *.wcorg-sponsors {
+      max-width: 1140px; }
   .page-content blockquote,
   .entry-content blockquote,
   .entry-summary blockquote {
@@ -1487,6 +1509,48 @@ a {
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
+
+/*--------------------------------------------------------------
+# Gutenberg
+--------------------------------------------------------------*/
+.wp-block-image.alignleft, .wp-block-image.alignright {
+  display: block;
+  float: none;
+  width: 100%; }
+  .wp-block-image.alignleft > *:last-child, .wp-block-image.alignright > *:last-child {
+    margin-bottom: 1.5em; }
+  .wp-block-image.alignleft img,
+  .wp-block-image.alignleft figcaption, .wp-block-image.alignright img,
+  .wp-block-image.alignright figcaption {
+    display: block;
+    width: 40%;
+    max-width: 40%; }
+
+.wp-block-image.alignleft img,
+.wp-block-image.alignleft figcaption {
+  float: left;
+  margin-right: 1.5em; }
+
+.wp-block-image.alignleft figcaption {
+  clear: left; }
+
+.wp-block-image.alignright img,
+.wp-block-image.alignright figcaption {
+  float: right;
+  margin-left: 1.5em; }
+
+.wp-block-image.alignright figcaption {
+  clear: right; }
+
+.wp-block-separator {
+  clear: both; }
+
+.wp-block-button.alignleft, .wp-block-button.alignright {
+  display: block;
+  float: none; }
+
+.wp-block-button.alignright {
+  text-align: right; }
 
 .blog .site-main {
   background-color: #EAE4E3;
@@ -1648,6 +1712,109 @@ a {
 .comment-metadata {
   font-size: 14px;
   font-size: 0.875rem; }
+
+/*--------------------------------------------------------------
+## Sponsors
+--------------------------------------------------------------*/
+h2.wcus-bordered-heading {
+  padding: 7px 20px;
+  display: flex;
+  align-items: center;
+  background: #111111;
+  color: #ffffff;
+  font-family: "BioRhyme", Georgia, "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.14px; }
+
+.wcorg-sponsors > div {
+  margin-top: 40px; }
+
+.wcorg-sponsors h2 {
+  padding: 7px 20px;
+  display: flex;
+  align-items: center;
+  background: #10193F;
+  color: #ffffff;
+  font-family: "BioRhyme", Georgia, "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.14px; }
+  .wcorg-sponsors h2:before, .wcorg-sponsors h2:after {
+    content: '';
+    flex: 1 0 auto;
+    padding: 0 10px;
+    height: 4px;
+    background: #ffffff; }
+  .wcorg-sponsors h2:before {
+    margin-right: 20px; }
+  .wcorg-sponsors h2:after {
+    margin-left: 20px; }
+
+.wcorg-sponsors .wcorg-sponsor-description img {
+  float: right;
+  margin-bottom: 20px; }
+  .wcorg-sponsors .wcorg-sponsor-description img + p {
+    clear: both; }
+
+.wcorg-sponsors .wcorg-sponsor-level-diamond h2,
+.wcorg-sponsors .wcorg-sponsor-level-diamond h3:after {
+  background-color: #722247; }
+
+.wcorg-sponsors .wcorg-sponsor-level-diamond h3 {
+  color: #722247; }
+
+.wcorg-sponsors .wcorg-sponsor-level-diamond .wcorg-sponsor-description img {
+  max-height: 200px; }
+
+.wcorg-sponsors .wcorg-sponsor-level-platinum h2,
+.wcorg-sponsors .wcorg-sponsor-level-platinum h3:after {
+  background-color: #BF6347; }
+
+.wcorg-sponsors .wcorg-sponsor-level-platinum h3 {
+  color: #BF6347; }
+
+.wcorg-sponsors .wcorg-sponsor-level-platinum .wcorg-sponsor-description img {
+  max-height: 130px; }
+
+.wcorg-sponsors .wcorg-sponsor-level-gold h2,
+.wcorg-sponsors .wcorg-sponsor-level-gold h3:after {
+  background-color: #F68C36; }
+
+.wcorg-sponsors .wcorg-sponsor-level-gold h3 {
+  color: #F68C36; }
+
+.wcorg-sponsors .wcorg-sponsor-level-gold .wcorg-sponsor-description img {
+  max-height: 110px; }
+
+.wcorg-sponsors .wcorg-sponsor-level-silver h2,
+.wcorg-sponsors .wcorg-sponsor-level-silver h3:after {
+  background-color: #8D3D46; }
+
+.wcorg-sponsors .wcorg-sponsor-level-silver h3 {
+  color: #8D3D46; }
+
+.wcorg-sponsors .wcorg-sponsor-level-silver .wcorg-sponsor-description img {
+  max-height: 90px; }
+
+.wcorg-sponsors .wcorg-sponsor-level-digital .wcorg-sponsor-description img {
+  max-height: 70px; }
+
+.wcorg-sponsor {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #EAE4E3; }
+  .wcorg-sponsor h3 {
+    display: flex;
+    align-items: center;
+    margin-top: 0; }
+    .wcorg-sponsor h3:after {
+      content: '';
+      flex: 1 0 auto;
+      height: 4px;
+      background-color: #10193F;
+      margin-left: 20px; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

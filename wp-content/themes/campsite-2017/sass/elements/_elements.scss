@@ -42,9 +42,9 @@ body {
 	&:after {
 		content: '';
 		position: absolute;
-		bottom: 0;
+		bottom: -1px;
 		left: 0;
-		background-image: url('https://jasonyingling.me/dev/svg/top-arch.svg');
+		background-image: url('https://2018.us.wordcamp.org/files/2018/08/top-arch.png');
 		background-repeat: no-repeat;
 		background-position: center bottom; 
 		// 101% to get rid of extra loop sneaking back in
@@ -89,3 +89,26 @@ figure {
 @import "tables";
 
 @import "buttons";
+
+#eu-cookie-law {
+	background: $color__squash;
+	color: $color__charcoal; 
+	border: 1px solid $color__squash;
+	padding: 20px;
+
+	input {
+		background: $color__squash;
+		border: 1px solid $color__white;
+		border-radius: 20px;
+		color: $color__white;
+		@include font-size(1.125);
+		text-transform: uppercase;
+		padding: 7px 20px;
+
+		&:hover,
+		&:focus {
+			background-color: $color__white;
+			color: $color__squash;
+		}
+	}
+}
