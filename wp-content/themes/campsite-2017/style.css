@@ -1140,7 +1140,8 @@ a {
     padding: 10px;
     color: #ffffff;
     text-transform: uppercase;
-    overflow: hidden; }
+    overflow: hidden;
+    pointer-events: none; }
     @media only screen and (min-width: 768px) {
       .wcus-practical-info figcaption {
         font-size: 22px;
