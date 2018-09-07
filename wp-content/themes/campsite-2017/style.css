@@ -1265,7 +1265,7 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("https://2018.us.wordcamp.org/files/2018/08/footer-arch.png");
+    background-image: url("https://2018.us.wordcamp.org/files/2018/08/footer-arch-e1536292170111.png");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 100%;
@@ -1490,7 +1490,7 @@ a {
   .entry-content blockquote,
   .entry-summary blockquote {
     max-width: 540px;
-    margin: 0 auto; }
+    margin: 1.5em auto; }
   .page-content .alignfull,
   .page-content blockquote.alignfull,
   .entry-content .alignfull,
@@ -1510,6 +1510,9 @@ a {
 .entry-footer {
   margin: 0 auto;
   max-width: 800px; }
+
+.entry-header {
+  margin: 0 auto 1.5em; }
 
 .page-links {
   clear: both;
