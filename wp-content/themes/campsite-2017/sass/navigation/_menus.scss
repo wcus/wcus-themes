@@ -1,16 +1,16 @@
 .main-navigation {
 	#primary-menu {
-		@include font-size(1);
+		@include font-size(0.9);
 		max-width: 1120px;
 		font-family: $font__main;
 		font-weight: 700;
 		background: $color__robin_blue;
 		margin: 0 auto;
-		padding: 0 20px 20px;
+		padding: 0 10px 20px;
 
 		@media #{$break-small} {
 			@include clearfix;
-			padding: 0 20px 0;
+			padding: 0 10px 0;
 		}
 
 		li {
@@ -51,7 +51,7 @@
 					&:after {
 						transition: transform 0.25s ease-in;
 						content: '';
-						background-image: url('/wp-content/uploads/sites/2/2018/07/dropdown-arrow.png');
+						background-image: url('https://2018.us.wordcamp.org/files/2018/08/dropdown-arrow.png');
 						background-size: 100%;
 						background-position: 0 0px;
 						background-repeat: no-repeat;
@@ -59,7 +59,7 @@
 						height: 6px;
 						display: block;
 						float: right;
-						margin-top: 10px;
+						margin-top: 7px;
 						margin-left: 10px;
 					}
 				}
@@ -67,10 +67,10 @@
 
 			> a {
 				text-transform: uppercase;
-				padding: 10px 20px;
+				padding: 10px 15px;
 
 				@media #{$break-small} {
-					padding: 25px 20px;
+					padding: 25px 15px;
 				}
 
 				&:hover, &.focus {
@@ -81,12 +81,12 @@
 
 		.sub-menu {
 			padding: 0;
-			@include font-size(1.125);
+			@include font-size(0.9);
 			font-weight: 400;
 			list-style-type: none;
 
 			li {
-				padding: 10px 20px 10px;
+				padding: 10px 15px 10px;
 
 				&:hover, &.focus {
 					background-color: #f4f4f4;
@@ -126,7 +126,7 @@
 				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 				float: left;
 				position: absolute;
-				top: 74px;
+				top: 71px;
 				left: -999em;
 				z-index: 99999;
 				padding: 10px 20px 20px;
