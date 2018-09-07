@@ -79,7 +79,7 @@
 
 	blockquote {
 		max-width: 540px;
-		margin: 0 auto;
+		margin: 1.5em auto;
 	}
 
 	.alignfull,
@@ -97,6 +97,10 @@
 .entry-footer {
 	margin: 0 auto;
 	max-width: 800px;
+}
+
+.entry-header {
+	margin: 0 auto 1.5em;
 }
 
 .page-links {
