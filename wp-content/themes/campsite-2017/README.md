@@ -17,9 +17,9 @@ Use a `Text` widget visible on the homepage to enter content
 Use a `Custom HTML` widget visible only on the homepage with the following code:
 
 ```
-<a href="#" class="wcus-social-button wcus-social-button--facebook">Facebook</a>
-<a href="#" class="wcus-social-button wcus-social-button--twitter">Twitter</a>
-<a href="#" class="wcus-social-button wcus-social-button--instagram">Instagram</a>
+<a href="https://www.facebook.com/WordCampUSA/" target="_blank" class="wcus-social-button wcus-social-button--facebook">Facebook</a>
+<a href="https://twitter.com/WordCampUS" target="_blank" class="wcus-social-button wcus-social-button--twitter">Twitter</a>
+<a href="https://www.instagram.com/wordcampus/" target="_blank" class="wcus-social-button wcus-social-button--instagram">Instagram</a>
 ```
 
 ### Jetpack Subscription
@@ -64,7 +64,7 @@ In a `Custom HTML` widget add the following:
 <div class="wcus-calls">
 	<div class="wcus-callout">
 		<a href="/speakers">
-			<img class="alignnone wp-image-1007 size-full" src="https://2018.wcus.wpengine.com/wp-content/uploads/sites/2/2018/07/speakers-call.jpg" alt="" width="1080" height="706" srcset="https://2018.wcus.wpengine.com/wp-content/uploads/sites/2/2018/07/speakers-call.jpg 1080w, https://2018.wcus.wpengine.com/wp-content/uploads/sites/2/2018/07/speakers-call-300x196.jpg 300w, https://2018.wcus.wpengine.com/wp-content/uploads/sites/2/2018/07/speakers-call-768x502.jpg 768w, https://2018.wcus.wpengine.com/wp-content/uploads/sites/2/2018/07/speakers-call-1024x669.jpg 1024w, https://2018.wcus.wpengine.com/wp-content/uploads/sites/2/2018/07/speakers-call-459x300.jpg 459w" sizes="(max-width: 1080px) 100vw, 1080px">
+			<img class="alignnone wp-image-3421 size-full" src="https://2018.us.wordcamp.org/files/2018/09/speakers-call.jpg" alt="" width="1080" height="706" srcset="https://2018.us.wordcamp.org/files/2018/09/speakers-call.jpg 1080w, https://2018.us.wordcamp.org/files/2018/09/speakers-call-300x196.jpg 300w, https://2018.us.wordcamp.org/files/2018/09/speakers-call-768x502.jpg 768w, https://2018.us.wordcamp.org/files/2018/09/speakers-call-1024x669.jpg 1024w, https://2018.us.wordcamp.org/files/2018/09/speakers-call-459x300.jpg 459w" sizes="(max-width: 1080px) 100vw, 1080px">
 			<div class="wcus-callout-title">
 				<h3>
 					Speakers Call
@@ -74,7 +74,7 @@ In a `Custom HTML` widget add the following:
 	</div>
 	<div class="wcus-callout">
 		<a href="/volunteers">
-			<img src="https://2018.wcus.wpengine.com/wp-content/uploads/sites/2/2018/07/volunteers-call.jpg" srcset="https://2018.wcus.wpengine.com/wp-content/uploads/sites/2/2018/07/volunteers-call.jpg 1080w, https://2018.wcus.wpengine.com/wp-content/uploads/sites/2/2018/07/volunteers-call-300x196.jpg 300w, https://2018.wcus.wpengine.com/wp-content/uploads/sites/2/2018/07/volunteers-call-768x502.jpg 768w, https://2018.wcus.wpengine.com/wp-content/uploads/sites/2/2018/07/volunteers-call-1024x669.jpg 1024w, https://2018.wcus.wpengine.com/wp-content/uploads/sites/2/2018/07/volunteers-call-459x300.jpg 459w" sizes="(max-width: 1080px) 100vw, 1080px" alt="Josepha Haden speaks at WordCamp US">
+			<img class="alignnone wp-image-3420 size-full" src="https://2018.us.wordcamp.org/files/2018/09/volunteers-call.jpg" alt="" width="1080" height="706" srcset="https://2018.us.wordcamp.org/files/2018/09/volunteers-call.jpg 1080w, https://2018.us.wordcamp.org/files/2018/09/volunteers-call-300x196.jpg 300w, https://2018.us.wordcamp.org/files/2018/09/volunteers-call-768x502.jpg 768w, https://2018.us.wordcamp.org/files/2018/09/volunteers-call-1024x669.jpg 1024w, https://2018.us.wordcamp.org/files/2018/09/volunteers-call-459x300.jpg 459w" sizes="(max-width: 1080px) 100vw, 1080px">
 			<div class="wcus-callout-title">
 				<h3>
 					Volunteers Call

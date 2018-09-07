@@ -61,15 +61,21 @@
 .entry-summary {
 	@include font-size(1.125);
 	line-height: 1.5;
-	
-	> * {
-		margin: 40px auto;
-		max-width: 800px;
+	max-width: 800px;
+	margin: 0 auto;
 
-		&.wcorg-sponsors {
-			max-width: 1140px;
-		}
+	.wcorg-sponsors {
+		max-width: 1140px;
 	}
+	
+	// > * {
+	// 	margin: 40px auto;
+	// 	max-width: 800px;
+
+	// 	&.wcorg-sponsors {
+	// 		max-width: 1140px;
+	// 	}
+	// }
 
 	blockquote {
 		max-width: 540px;
