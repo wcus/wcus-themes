@@ -1837,11 +1837,11 @@ h2.wcus-bordered-heading {
 
 .wcpt-session-title {
   display: block;
-  color: #00627E; }
+  color: #111111; }
   .wcpt-session-title:visited {
-    color: #00627E; }
+    color: #111111; }
   .wcpt-session-title:hover, .wcpt-session-title:focus {
-    color: #BF6347; }
+    color: #10193F; }
 
 .wcpt-session-speakers {
   font-size: 14px;
@@ -1852,7 +1852,7 @@ h2.wcus-bordered-heading {
     .wcpt-session-speakers a:visited {
       color: #111111; }
     .wcpt-session-speakers a:hover, .wcpt-session-speakers a:focus {
-      color: #BF6347; }
+      color: #10193F; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

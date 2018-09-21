@@ -17,15 +17,15 @@
 
 .wcpt-session-title {
     display: block;
-    color: $color__azure;
+    color: $color__charcoal;
 
     &:visited {
-        color: $color__azure;
+        color: $color__charcoal;
     }
 
     &:hover,
     &:focus {
-        color: $color__pumpkin;
+        color: $color__navy;
     }
 }
 
@@ -42,7 +42,7 @@
 
         &:hover,
         &:focus {
-            color: $color__pumpkin;
+            color: $color__navy;
         }
     }
 }
