@@ -1841,7 +1841,7 @@ h2.wcus-bordered-heading {
   .wcpt-session-title:visited {
     color: #111111; }
   .wcpt-session-title:hover, .wcpt-session-title:focus {
-    color: #10193F; }
+    color: #722247; }
 
 .wcpt-session-speakers {
   font-size: 14px;
@@ -1852,7 +1852,7 @@ h2.wcus-bordered-heading {
     .wcpt-session-speakers a:visited {
       color: #111111; }
     .wcpt-session-speakers a:hover, .wcpt-session-speakers a:focus {
-      color: #10193F; }
+      color: #722247; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
