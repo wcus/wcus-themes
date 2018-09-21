@@ -1,7 +1,10 @@
+## Turn off Jetpack Lazy Load on images
+To make sure images using Jetpack don't lazy load add the class `skip-lazy` to it.
+
 ## Header Widget Area 1
 
 ### WCUS Logo
-Use an `Image` widget with a custom size. Visible on all pages. 
+Use an `Image` widget with a custom size. Visible on all pages. To make sure the image doesn't lazy load go into the Advanced options when selecting the image and add the CSS class `skip-lazy`.
 
 ### WCUS Ticket Button
 Use a `Custom HTML` widget visible on all pages with the following:
