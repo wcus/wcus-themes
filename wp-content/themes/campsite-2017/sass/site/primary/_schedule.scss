@@ -1,0 +1,48 @@
+.wcpt-schedule {
+    &:not(.global-session) tr {
+
+        & > td:nth-of-type(n + 2) {
+            width: calc(100%/3);
+        }
+        
+        & > td:first-of-type, .sunday-schedule .wcpt-schedule tr > td.wcpt-time {
+            width: 100px;
+        }
+    }
+}
+
+.sunday-schedule .wcpt-schedule tr > .wcb-track-contributor-day:not(.wcpt-time) {
+    width: auto;
+}
+
+.wcpt-session-title {
+    display: block;
+    color: $color__azure;
+
+    &:visited {
+        color: $color__azure;
+    }
+
+    &:hover,
+    &:focus {
+        color: $color__pumpkin;
+    }
+}
+
+.wcpt-session-speakers {
+    @include font-size(0.875);
+    display: block;
+    
+    a {
+        color: $color__charcoal;
+
+        &:visited {
+            color: $color__charcoal;
+        }
+
+        &:hover,
+        &:focus {
+            color: $color__pumpkin;
+        }
+    }
+}

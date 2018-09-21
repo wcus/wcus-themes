@@ -1,7 +1,7 @@
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
-	border: 2px solid $color__dark_gray;
+	border: 2px solid $color__gray;
 }
 
 thead {
@@ -13,7 +13,7 @@ thead {
 tbody {
 	tr {
 		&:nth-child(odd) {
-			background-color: $color__gray;
+			background-color: $color__light_gray;
 		}
 	}
 }

@@ -511,7 +511,7 @@ figure {
 table {
   margin: 0 0 1.5em;
   width: 100%;
-  border: 2px solid #979797; }
+  border: 2px solid #d8d8d8; }
 
 thead {
   font-size: 18px;
@@ -520,7 +520,7 @@ thead {
   color: #ffffff; }
 
 tbody tr:nth-child(odd) {
-  background-color: #d8d8d8; }
+  background-color: #efefef; }
 
 th {
   text-align: left; }
@@ -1506,6 +1506,9 @@ a {
   .entry-summary blockquote.alignwide {
     max-width: 1120px; }
 
+.page-slug-schedule .entry-content {
+  max-width: 960px; }
+
 .entry-header,
 .entry-footer {
   margin: 0 auto;
@@ -1811,6 +1814,45 @@ h2.wcus-bordered-heading {
       height: 4px;
       background-color: #10193F;
       margin-left: 20px; }
+
+/*--------------------------------------------------------------
+## Speakers
+--------------------------------------------------------------*/
+.wcorg-speaker-description .avatar {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%; }
+
+/*--------------------------------------------------------------
+## Schedule
+--------------------------------------------------------------*/
+.wcpt-schedule:not(.global-session) tr > td:nth-of-type(n + 2) {
+  width: calc(100%/3); }
+
+.wcpt-schedule:not(.global-session) tr > td:first-of-type, .wcpt-schedule:not(.global-session) tr .sunday-schedule .wcpt-schedule tr > td.wcpt-time {
+  width: 100px; }
+
+.sunday-schedule .wcpt-schedule tr > .wcb-track-contributor-day:not(.wcpt-time) {
+  width: auto; }
+
+.wcpt-session-title {
+  display: block;
+  color: #00627E; }
+  .wcpt-session-title:visited {
+    color: #00627E; }
+  .wcpt-session-title:hover, .wcpt-session-title:focus {
+    color: #BF6347; }
+
+.wcpt-session-speakers {
+  font-size: 14px;
+  font-size: 0.875rem;
+  display: block; }
+  .wcpt-session-speakers a {
+    color: #111111; }
+    .wcpt-session-speakers a:visited {
+      color: #111111; }
+    .wcpt-session-speakers a:hover, .wcpt-session-speakers a:focus {
+      color: #BF6347; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
