@@ -20,6 +20,18 @@
     }
 }
 
+.wcpt-session-type-session:before {
+    @media screen and (max-width: 700px) {
+        color: $color__charcoal;
+    }
+}
+
+span.wcpt-session-speakers {
+    @media screen and (max-width: 700px) {
+        padding-left: 10px;
+    }
+}
+
 .sunday-schedule .wcpt-schedule tr > .wcb-track-contributor-day:not(.wcpt-time) {
     width: auto;
 }
