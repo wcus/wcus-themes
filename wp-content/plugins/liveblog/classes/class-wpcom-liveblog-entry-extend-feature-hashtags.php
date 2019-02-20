@@ -39,11 +39,38 @@ class WPCOM_Liveblog_Entry_Extend_Feature_Hashtags extends WPCOM_Liveblog_Entry_
 		// the generated hashtag class.
 		$this->class_prefix = apply_filters( 'liveblog_hashtag_class', $this->class_prefix );
 
+		$prefixes = implode( '|', $this->get_prefixes() );
+
+		// Set a better regex for hashtags to allow for hex values in content -- see https://regex101.com/r/CLWsCo/
+		// phpcs:disable Squiz.Strings.ConcatenationSpacing.PaddingFound -- ignore indentation
+		$this->set_regex(
+			'~'
+			. '(?:'
+			.     '(?<!\S)'          // any visible character
+			. '|'
+			.     '>?'               // possible right angle bracket(s)
+			. ')'
+			. '(?:'
+			.     '(?<!'
+			.         '&'            // literal ampersand
+			.     '|'
+			.         '&amp;'        // encoded ampersand
+			.     ')'
+			. ')'
+			. '('
+			.     "(?:{$prefixes})"  // hashtag prefixes
+			.     '([0-9_\-\p{L}]*)' // 1: numerals, underscores, dashes, and any letter in any language
+			. ')'
+			. '~um'
+		);
+		// phpcs:enable
+
 		// This is the regex used to revert the
 		// generated hashtag html back to the
 		// raw input format (e.g #hashtag).
 		$this->revert_regex = implode(
-			'', array(
+			'',
+			array(
 				preg_quote( '<span class="liveblog-hash ', '~' ),
 				preg_quote( $this->class_prefix, '~' ),
 				'([^"]+)',
@@ -87,7 +114,8 @@ class WPCOM_Liveblog_Entry_Extend_Feature_Hashtags extends WPCOM_Liveblog_Entry_
 		// config, after first allowing other plugins,
 		// themes, etc. to modify it as required
 		$config[] = apply_filters(
-			'liveblog_hashtag_config', array(
+			'liveblog_hashtag_config',
+			array(
 				'type'        => 'ajax',
 				'cache'       => 1000 * 60,
 				'regex'       => '#([\w\d\-]*)$',
@@ -142,7 +170,7 @@ class WPCOM_Liveblog_Entry_Extend_Feature_Hashtags extends WPCOM_Liveblog_Entry_
 
 		// If it doesn't exist, then make it.
 		if ( ! get_term_by( 'slug', $hashtag, self::$taxonomy ) ) {
-			$error = wp_insert_term( $hashtag, self::$taxonomy );
+			wp_insert_term( $hashtag, self::$taxonomy );
 		}
 
 		// Replace the #hashtag content with a styled
@@ -180,7 +208,7 @@ class WPCOM_Liveblog_Entry_Extend_Feature_Hashtags extends WPCOM_Liveblog_Entry_
 		if ( WPCOM_Liveblog::KEY === $comment->comment_type ) {
 
 			// Grab all the prefixed classes applied.
-			preg_match_all( '/(?<!\w)' . preg_quote( $this->class_prefix ) . '(\w\-?)+/', $comment->comment_content, $terms );
+			preg_match_all( '/(?<!\w)' . preg_quote( $this->class_prefix, '/' ) . '(\w\-?)+/', $comment->comment_content, $terms );
 
 			// Append the first class to the classes array.
 			$classes = array_merge( $classes, $terms[0] );
@@ -259,7 +287,7 @@ class WPCOM_Liveblog_Entry_Extend_Feature_Hashtags extends WPCOM_Liveblog_Entry_
 		// Remove the where clause's section about the name.
 		$clauses['where'] = preg_replace(
 			array(
-				'~\\(\\(.*(?=' . preg_quote( "(t.slug LIKE '" ) . ')~',
+				'~\\(\\(.*(?=' . preg_quote( "(t.slug LIKE '", '~' ) . ')~',
 				'~(%\'\\))\\)~',
 			),
 			'($1',
