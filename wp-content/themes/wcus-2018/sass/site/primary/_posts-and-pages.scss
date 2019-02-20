@@ -1,0 +1,180 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.entry-title {
+	@include font-size(2.25);
+	color: $color__azure;
+	margin-top: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.posted-on a {
+	display: inline-block; /* Remove unwanted whitespace; see https://stackoverflow.com/a/10203529/450127 */
+}
+
+.entry-meta {
+	@include font-size(0.875);
+	font-weight: 700;
+	margin-bottom: 20px;
+
+	.single & {
+		margin-bottom: 0;
+	}
+
+	a {
+		color: $color__azure;
+		text-decoration: none;
+
+		&:hover, &:focus {
+			text-decoration: underline;
+			color: $color__jam;
+		}
+	}
+
+	time {
+		//text-transform: uppercase;
+	}
+
+	.byline {
+		//display: none;
+	}
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	@include font-size(1.125);
+	line-height: 1.5;
+	max-width: 800px;
+	margin: 0 auto;
+
+	.wcorg-sponsors {
+		max-width: 1140px;
+	}
+	
+	// > * {
+	// 	margin: 40px auto;
+	// 	max-width: 800px;
+
+	// 	&.wcorg-sponsors {
+	// 		max-width: 1140px;
+	// 	}
+	// }
+
+	blockquote {
+		max-width: 540px;
+		margin: 1.5em auto;
+	}
+
+	.alignfull,
+	blockquote.alignfull {
+		max-width: 100%;
+	}
+
+	.alignwide,
+	blockquote.alignwide {
+		max-width: 1120px;
+	}
+}
+
+.page-slug-schedule {
+	.entry-content {
+		max-width: 960px;
+	}
+}
+
+.entry-header,
+.entry-footer {
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+.entry-header {
+	margin: 0 auto 1.5em;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+# Gutenberg
+--------------------------------------------------------------*/
+.wp-block-image {
+	&.alignleft,
+	&.alignright {
+		display: block;
+		float: none;
+		width: 100%;
+
+		> * {
+			&:last-child {
+				margin-bottom: 1.5em;
+			}
+		}
+
+		img, 
+		figcaption {
+			display: block;
+			width: 40%;
+			max-width: 40%;
+		}
+	}
+
+	&.alignleft {
+		img,
+		figcaption {
+			float: left;
+			margin-right: 1.5em;
+		}
+
+		figcaption {
+			clear: left;
+		}
+	}
+
+	&.alignright {
+		img,
+		figcaption {
+			float: right;
+			margin-left: 1.5em;
+		}
+
+		figcaption {
+			clear: right;
+		}
+	}
+}
+
+.wp-block-separator {
+	clear: both;
+}
+
+.wp-block-button {
+	&.alignleft,
+	&.alignright {
+		display: block;
+		float: none;
+	}
+
+	&.alignright {
+		text-align: right;
+	}
+}

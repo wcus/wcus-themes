@@ -1,0 +1,28 @@
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+	border: 2px solid $color__gray;
+}
+
+thead {
+	@include font-size(1.125);
+	background-color: $color__azure;
+	color: $color__white;
+}
+
+tbody {
+	tr {
+		&:nth-child(odd) {
+			background-color: $color__light_gray;
+		}
+	}
+}
+
+th {
+	text-align: left;
+}
+
+th, td {
+	padding: 10px 20px;
+	font-weight: 400;
+}

@@ -1,0 +1,114 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	font-family: $font__main;
+	font-weight: 400;
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+.site-header {
+	position: relative;
+	padding-bottom: 40px;
+	background-color: $color__navy;
+	background-image: url('https://2018.us.wordcamp.org/files/2018/09/wcus-nashville-bg@2x.jpg');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 100%;
+
+	@media #{$break-small} {
+		padding-bottom: 120px;
+	}
+
+	.home & {
+		padding-bottom: 80px;
+
+		@media #{$break-small} {
+			padding-bottom: 200px;
+		}
+	}
+
+	> * {
+		position: relative;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		background-image: url('https://2018.us.wordcamp.org/files/2018/08/top-arch.png');
+		background-repeat: no-repeat;
+		background-position: center bottom; 
+		// 101% to get rid of extra loop sneaking back in
+		background-size: 101%;
+		width: 100%;
+		height: 20vw;
+		display: block;
+		z-index: 1;
+	}
+}
+
+.site-content {
+	background: #ffffff;
+}
+
+.content-area {
+	padding: 0 20px;
+}
+
+blockquote, q {
+	quotes: "" "";
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+@import "lists";
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+@import "tables";
+
+@import "buttons";
+
+#eu-cookie-law {
+	background: $color__squash;
+	color: $color__charcoal; 
+	border: 1px solid $color__squash;
+	padding: 20px;
+
+	input {
+		background: $color__squash;
+		border: 1px solid $color__white;
+		border-radius: 20px;
+		color: $color__white;
+		@include font-size(1.125);
+		text-transform: uppercase;
+		padding: 7px 20px;
+
+		&:hover,
+		&:focus {
+			background-color: $color__white;
+			color: $color__squash;
+		}
+	}
+}

@@ -1,0 +1,79 @@
+ul, ol {
+	margin: 0 0 1.5em 3em;
+
+	ul, ol {
+		margin-top: 1em;
+	}
+
+	li {
+		margin-bottom: 1em;
+	}
+}
+
+.tix-attendee-list {
+	padding: 0;
+
+	li {
+		&:before {
+			display: none !important;
+		}
+	}
+}
+
+ul:not(.wp-block-gallery) {
+	list-style-type: none;
+
+	li {
+		position: relative;
+
+		&:before {
+			content: '';
+			width: 12px;
+			height: 12px;
+			display: block;
+			border-radius: 100px;
+			background-color: $color__azure;
+			position: absolute;
+			top: 6px;
+			left: -27px;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+
+		li {
+			&:before {
+				background-color: $color__gray;
+			}
+		}
+
+		ul {
+			list-style-type: disc;
+
+			li {
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}

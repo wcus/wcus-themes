@@ -1,0 +1,21 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font__sec;
+	clear: both;
+}
+
+h1 {
+	@include font-size(2.875);
+}
+
+h2 {
+	@include font-size(1.875);
+	line-height: 1.2;
+}
+
+h3 {
+	@include font-size(1.5);
+}
+
+h4 {
+	@include font-size(1.25);
+}

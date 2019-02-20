@@ -101,3 +101,4 @@ wp-content/mysql.sql
 
 # additional configs
 config.codekit3
+node_modules
